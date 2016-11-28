@@ -1,0 +1,215 @@
+<equipa>
+	<nome_completo>Sport Lisboa e Benfica</nome_completo>
+	<jogadores>
+		<jogador>
+			<nome>Júlio CESAR</nome>
+			<posicao>GR</posicao>
+			<idade>37</idade>
+			<valor>89</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Ederson MORAES</nome>
+			<posicao>GR</posicao>
+			<idade>23</idade>
+			<valor>86</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Paulo LOPES</nome>
+			<posicao>GR</posicao>
+			<idade>38</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Pereira ELISEU</nome>
+			<posicao>DEF</posicao>
+			<idade>33</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>André ALMEIDA</nome>
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>87</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Álex GRIMALDO</nome>
+			<posicao>DEF</posicao>
+			<idade>21</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Nivaldo JARDEL</nome>
+			<posicao>DEF</posicao>
+			<idade>30</idade>
+			<valor>89</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Ânderson LUISÃO</nome>
+			<posicao>DEF</posicao>
+			<idade>35</idade>
+			<valor>89</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Lisandro LÓPEZ</nome>
+			<posicao>DEF</posicao>
+			<idade>27</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Victor LINDELÖF</nome>
+			<posicao>DEF</posicao>
+			<idade>22</idade>
+			<valor>87</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Rúben DIAS</nome>
+			<posicao>DEF</posicao>
+			<idade>19</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Rúben AMORIM</nome>
+			<posicao>DEF</posicao>
+			<idade>31</idade>
+			<valor>87</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Nélson SEMEDO</nome>
+			<posicao>DEF</posicao>
+			<idade>23</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Andreas SAMARIS</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Ljubomir FEJSA</nome>
+			<posicao>MED</posicao>
+			<idade>28</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Danilo BARBOSA</nome>
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>87</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Luís PIZZI</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>89</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Guillermo CELIS</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>André HORTA</nome>
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>André CARRILLO</nome>
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>89</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Eduardo SALVIO</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>89</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Rafa SILVA</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Raúl JIMÉNEZ</nome>
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Andrija ŽIVKOVIĆ</nome>
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Gonçalo GUEDES</nome>
+			<posicao>MED</posicao>
+			<idade>19</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Franco CERVI</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>José GOMES</nome>
+			<posicao>MED</posicao>
+			<idade>17</idade>
+			<valor>73</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Gonçalves JONAS</nome>
+			<posicao>MED</posicao>
+			<idade>32</idade>
+			<valor>90</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Luka JOVIĆ</nome>
+			<posicao>AVA</posicao>
+			<idade>18</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>Kostas MITROGLOU</nome>
+			<posicao>AVA</posicao>
+			<idade>28</idade>
+			<valor>89</valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>

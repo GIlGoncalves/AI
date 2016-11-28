@@ -1,0 +1,194 @@
+<equipa>
+	<nome_completo>Clube Desportivo Tondela</nome_completo>
+	<jogadores>
+		<jogador>	
+			<nome>RAMOS, Cláudio</nome>
+			<posicao>GR</posicao>
+			<idade>25</idade>
+			<valor>80<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>JANOTA, Ricardo</nome>
+			<posicao>GR</posicao>
+			<idade>29</idade>
+			<valor>76<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>BATISTA, Miguel</nome>
+			<posicao>GR</posicao>
+			<idade>21</idade>
+			<valor>70<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>BRUNO, David</nome>
+			<posicao>DEF</posicao>
+			<idade>24</idade>
+			<valor>80<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>NUNES, Fábio</nome>
+			<posicao>DEF</posicao>
+			<idade>24</idade>
+			<valor>78<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>MAMADU, Candé</nome>
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>78<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>KAKÁ, Claudiano</nome>
+			<posicao>DEF</posicao>
+			<idade>35</idade>
+			<valor>82<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>TAMBÈ, Alassane</nome>
+			<posicao>DEF</posicao>
+			<idade>24</idade>
+			<valor>80<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>AMORIM, Rafael</nome>
+			<posicao>DEF</posicao>
+			<idade>29</idade>
+			<valor>80<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>LYSTSOV, Vitali</nome>
+			<posicao>DEF</posicao>
+			<idade>21</idade>
+			<valor>78<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>PICA, João</nome>
+			<posicao>DEF</posicao>
+			<idade>30</idade>
+			<valor>77<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>JAILSON, Araújo</nome>
+			<posicao>DEF</posicao>
+			<idade>25</idade>
+			<valor>82<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>TAVARES, Hélder</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>82<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>GONÇALVES, Claude</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>80<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>MONTEIRO, Bruno</nome>
+			<posicao>MED</posicao>
+			<idade>32</idade>
+			<valor>80<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>JAQUITÉ, João</nome>
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>70<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>FERREIRA, Fernando</nome>
+			<posicao>MED</posicao>
+			<idade>30</idade>
+			<valor>83<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>CARDOSO, Miguel</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>78<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>WAGNER, Andrade</nome>
+			<posicao>MED</posicao>
+			<idade>29</idade>
+			<valor>80<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>MURILLO, Jhon</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>80<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>CANTANHEDE, Bruno</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>78<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>PITÉ, Luís</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>78<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>CORREIA, José</nome>
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>75<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>OLIVERA, Murilo</nome>
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>70<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>FLORES, Dylan</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>78<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>MORENO, Erik</nome>
+			<posicao>AVA</posicao>
+			<idade>25</idade>
+			<valor>82<valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>CRISLAN, Henrique</nome>
+			<posicao>AVA</posicao>
+			<idade>24</idade>
+			<valor>80<valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>
