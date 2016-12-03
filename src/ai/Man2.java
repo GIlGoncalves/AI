@@ -3,7 +3,7 @@ import jade.core.*;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
-//Sender:sijade.Chines;receiver:sijade.Chines
+//Manager2
 public class Man2  extends Agent{
 
 	protected void setup(){
@@ -12,13 +12,14 @@ public class Man2  extends Agent{
 	}
 	
 	/*
-	 * 
+	 *  Pedidos Recebidos do Critico
 	 * ->Critic [Equipa] Estado
 	 * ->Critic [Equipa] Jogadores
 	 * ->Critic [Equipa,Equipa] Historico
 	 * ->Critic [Equipa] Classificacao
 	 * 
-	 * ->AE [Float,Equipa] Estado
+	 * Respostas dos Agentes 
+	 * ->AE [Float,Equipa] Estado 
 	 * ->AJ [float,Equipa] Jogadores
 	 * ->AH [INT] Historico
 	 * ->ACL [INT,Equipa] Classificacao
@@ -54,12 +55,13 @@ public class Man2  extends Agent{
 		}
 		}
 	/*
-	 * 
+	 * Manda ao critico os resultados
 	 * ->Critic [Float,Equipa] Estado
 	 * ->Critic [float,Equipa] Jogadores
 	 * ->Critic [INT] Historico
 	 * ->Critic [INT,Equipa] Classificacao
 	 * 
+	 * pede aos Agentes para procurarem
 	 * ->AE [Equipa] Estado
 	 * ->AJ [Equipa] Jogadores
 	 * ->AH [Equipa,Equipa] Historico
