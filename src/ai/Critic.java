@@ -3,7 +3,7 @@ import jade.core.*;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
-//Sender:sijade.Chines;receiver:sijade.Chines
+//Critico - Responsavel por decidir quem ganha
 public class Critic  extends Agent{
 
 	protected void setup(){
@@ -13,10 +13,10 @@ public class Critic  extends Agent{
 	
 	/*
 	 * 
-	 * ->Man2 [Float,Equipa] Estado
-	 * ->Man2 [float,Equipa] Jogadores
-	 * ->Man2 [INT] Historico
-	 * ->Man2 [INT,Equipa] Classificacao
+	 * ->Man2 [Float,Equipa] Estado - Estado do jogo que a equipa vai ter, (descanso,etc)
+	 * ->Man2 [float,Equipa] Jogadores - Recebe score dos jogdres de uma equipa
+	 * ->Man2 [INT] Historico  - Int representa se a eq da casa ganha , perde ou empata
+	 * ->Man2 [INT,Equipa] Classificacao - Recebe a classificacao de uma equipa 
 	 * 
 	 */
 	private class ReceiveBehaviour extends CyclicBehaviour {
@@ -48,8 +48,8 @@ public class Critic  extends Agent{
 		}
 		}
 	/*
-	 * 
-	 * ->M2 [Equipa] Estado
+	 * Pede ao Man2 a informacao
+	 * ->M2 [Equipa] Estado   
 	 * ->M2 [Equipa] Jogadores
 	 * ->M2 [Equipa,Equipa] Historico
 	 * ->M2 [Equipa] Classificacao

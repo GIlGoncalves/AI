@@ -3,7 +3,7 @@ import jade.core.*;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
-//Sender:sijade.Chines;receiver:sijade.Chines
+//Agente que verifica a classificaçao de uma equipa 
 public class ACL  extends Agent{
 
 	protected void setup(){

@@ -3,7 +3,7 @@ import jade.core.*;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
-//Sender:sijade.Chines;receiver:sijade.Chines
+//Agente que ve estado de uma equipa antes de uma jogo
 public class AE  extends Agent{
 
 	protected void setup(){

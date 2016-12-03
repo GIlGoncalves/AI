@@ -3,7 +3,7 @@ import jade.core.*;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
-//Sender:sijade.Chines;receiver:sijade.Chines
+//Agente que procura os jogos de uma liga 
 public class PJ  extends Agent{
 
 	protected void setup(){

@@ -3,7 +3,7 @@ import jade.core.*;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
-//Sender:sijade.Chines;receiver:sijade.Chines
+//Manager 1
 public class Man1  extends Agent{
 
 	protected void setup(){
@@ -13,9 +13,9 @@ public class Man1  extends Agent{
 	
 	/*
 	 * 
-	 * ->Software [LigaB] INFOLIGA
-	 * ->PJ [LigaB] Jogos
-	 * ->Critic [LigaB] Avaliar
+	 * ->Software [LigaB] INFOLIGA - pedido das previsoes de uma liga 
+	 * ->PJ [LigaB] Jogos - jogos da Liga por avaliar
+	 * ->Critic [LigaB] Avaliar - jogos da liga avaliados
 	 * 
 	 */
 	private class ReceiveBehaviour extends CyclicBehaviour {
@@ -48,9 +48,9 @@ public class Man1  extends Agent{
 		}
 	/*
 	 * 
-	 * ->Sofwtare [LigaB] INFOLIGA
-	 * ->PJ [LigaB] Jogos
-	 * ->Critic [LigaB] Avaliar
+	 * ->Sofwtare [LigaB] INFOLIGA - manda ao software as previsoes 
+	 * ->PJ [LigaB] Jogos  - pede ao agente os jogos
+	 * ->Critic [LigaB] Avaliar - pede ao critico para prever
 	 * 
 	 */
 	private class sendMessage extends SimpleBehaviour{
