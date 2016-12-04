@@ -12,7 +12,8 @@ import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import jade.lang.acl.UnreadableException;
-//Manager 1
+
+//Manager 
 public class Man1  extends Agent{
 public HashSet<LigaB> apostas;
 	protected void setup(){
@@ -21,13 +22,7 @@ public HashSet<LigaB> apostas;
 		this.addBehaviour(new ReceiveBehaviour());
 	}
 	
-	/*
-	 * 
-	 * ->Software [LigaB] INFOLIGA - pedido das previsoes de uma liga 
-	 * ->PJ [LigaB] Jogos - jogos da Liga por avaliar
-	 * ->Critic [LigaB] Avaliar - jogos da liga avaliados
-	 * 
-	 */
+
 	private Boolean CheckLiga (String nome){
 		Boolean ret = false;
 		for(LigaB a : this.apostas){
@@ -37,6 +32,13 @@ public HashSet<LigaB> apostas;
 		return ret;
 		
 	}
+	
+	
+	/*
+	 * 
+	 * Behaviour principal de receber  
+	 * 
+	 */
 	private class ReceiveBehaviour extends CyclicBehaviour {
 		
 		@Override
@@ -63,6 +65,12 @@ public HashSet<LigaB> apostas;
 		}
 		}
 	
+	
+	/*
+	 * 
+	 * Behaviours que recebe mensagens dos Agentes 
+	 * 
+	 */
 	private class receiveMessageJogos extends ReceiveBehaviour{
 		
 		@Override
@@ -120,11 +128,11 @@ public HashSet<LigaB> apostas;
 		
 		}
 	}
+	
+	
 	/*
 	 * 
-	 * ->Sofwtare [LigaB] INFOLIGA - manda ao software as previsoes 
-	 * ->PJ [LigaB] Jogos  - pede ao agente os jogos
-	 * ->Critic [LigaB] Avaliar - pede ao critico para prever
+	 * Behaviour que mandam mensagens aos Agentes 
 	 * 
 	 */
 	
@@ -164,7 +172,7 @@ public HashSet<LigaB> apostas;
 		@Override 
 		public void action(){
 			AID receiver = new AID();
-			receiver.setLocalName("Man2");
+			receiver.setLocalName("Critic");
 			ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
 			msg.setOntology("Critica");
 			try {

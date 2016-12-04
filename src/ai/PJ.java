@@ -6,6 +6,7 @@ import jade.core.behaviours.SequentialBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
+
 //Agente que procura os jogos de uma liga 
 public class PJ  extends Agent{
 
@@ -14,11 +15,7 @@ public class PJ  extends Agent{
 		this.addBehaviour(new ReceiveBehaviour());
 	}
 	
-	/*
-	 * 
-	 * ->Man1 [LigaB] Jogos
-	 * 
-	 */
+	
 	private class ReceiveBehaviour extends CyclicBehaviour {
 		
 		@Override
@@ -48,11 +45,7 @@ public class PJ  extends Agent{
 		}
 	
 	
-	/*
-	 * 
-	 * ->Man1 [LigaB] Jogos
-	 * 
-	 */
+	
 	private class sendMessage extends OneShotBehaviour{
 		LigaB liga;
 		public sendMessage(LigaB liga){

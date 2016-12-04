@@ -1,8 +1,11 @@
 package ai;
 import jade.core.*;
 import jade.core.behaviours.CyclicBehaviour;
+import jade.core.behaviours.OneShotBehaviour;
+import jade.core.behaviours.SequentialBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
+import jade.lang.acl.MessageTemplate;
 //Agente que ve estado de uma equipa antes de uma jogo
 public class AE  extends Agent{
 
@@ -11,70 +14,50 @@ public class AE  extends Agent{
 		this.addBehaviour(new ReceiveBehaviour());
 	}
 	
-	
 	private class ReceiveBehaviour extends CyclicBehaviour {
 		
 		@Override
 		public void action(){
-			ACLMessage msg = receive();
+			
+			MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.REQUEST);
+			MessageTemplate mtE = MessageTemplate.MatchOntology("ESTADO");
+			MessageTemplate mtRespEstado = MessageTemplate.and(mt, mtE);
+			ACLMessage msg = receive(mtRespEstado);
+			
 			if(msg != null){
-				/*
-				System.out.println("Ola mano " + msg.getSender() + "eu acho que " + msg.getContent());
-				ACLMessage rsp = msg.createReply();
+				SequentialBehaviour seq = new SequentialBehaviour();
 				
-				if(msg.getContent().equals("Ping")){
-					
-					rsp.setContent("Pong");
-					rsp.setPerformative(ACLMessage.INFORM);
-				}
-				else if(msg.getContent().equals("Pong")){
-					rsp.setContent("Ping");
-					rsp.setPerformative(ACLMessage.INFORM);
-				}
-				else {
-					rsp.setContent("Raquete na testa");
-					rsp.setPerformative(ACLMessage.NOT_UNDERSTOOD);
-				}
-				send(rsp);                                                                 */
+				seq.addSubBehaviour(new sendMessageC(msg.getConversationId()));
+				myAgent.addBehaviour(seq);
+				
 			}
-			block();
-		}
+			
+				
+			}
 		}
 	
-	private class sendMessage extends SimpleBehaviour{
-		
-		@Override
-		public int onEnd(){
-			
-			myAgent.doDelete();
-			return 0; 
-		}
-		
+	
+	
+	private class sendMessageC extends OneShotBehaviour{
+		String id ;
+	 public sendMessageC(String s) {
+		id = s;
+	}
 		@Override 
 		public void action(){
-			
 			AID receiver = new AID();
-			receiver.setLocalName("pingaponga");
-			
-			
+			receiver.setLocalName("Critico");
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
-			long time = System.currentTimeMillis();
-			msg.setConversationId(" " + time);
-			msg.addReceiver(receiver);
+			msg.setOntology("ESTADO");
+			msg.setConversationId(id);
+			// meter o conteudo como sendo o calculo 	msg.setContent("");
+				msg.addReceiver(receiver);
+				myAgent.send(msg);
 			
+			
+		}
+	
+			
+		}
 
-				
-				msg.setContent("Ping");
-				
-		
-		
-			myAgent.send(msg);
-			
-		}
-		
-		@Override 
-		public boolean done(){
-			return true;
-		}
-	}
 }

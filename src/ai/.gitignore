@@ -58,3 +58,17 @@
 /Critic$receiveMessageAH.class
 /Critic$receiveMessageACL.class
 /Critic$sendMessageMan.class
+/Critic$CriticBehaviour$ReceiveBehaviour.class
+/Critic$CriticBehaviour$receiveMessageACL.class
+/Critic$CriticBehaviour$receiveMessageAE.class
+/Critic$CriticBehaviour$receiveMessageAH.class
+/Critic$CriticBehaviour$receiveMessageAJ.class
+/Critic$CriticBehaviour$sendMessageACL.class
+/Critic$CriticBehaviour$sendMessageAE.class
+/Critic$CriticBehaviour$sendMessageAH.class
+/Critic$CriticBehaviour$sendMessageAJ.class
+/Critic$CriticBehaviour$sendMessageMan.class
+/AE$sendMessageC.class
+/AJ$sendMessageC.class
+/AH$sendMessageC.class
+/ACL$sendMessageC.class

@@ -7,8 +7,15 @@ import jade.core.behaviours.SequentialBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
+
+
+
+
+
 //Critico - Responsavel por decidir quem ganha
+
 public class Critic  extends Agent{
+	
 private LigaB ligacritic;
 private float [][]  res;
 	protected void setup(){
@@ -19,53 +26,12 @@ private float [][]  res;
 	}
 	
 	
-	private class CriticBehaviour extends OneShotBehaviour{
-		String at ;
-		String bt;
-		int i;
-		int casa;
+	
 		
- public CriticBehaviour(int iv ,Equipa a, Equipa b , int casav) {
-		at = a.getNome();
-		bt = b.getNome();
-		casa = casav;
-		i = iv;
-		
-	}
-		@Override 
-		public void action(){
-			 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
-			 SequentialBehaviour seq1 = new SequentialBehaviour();
-			 SequentialBehaviour seq2 = new SequentialBehaviour();
-			 SequentialBehaviour seq3 = new SequentialBehaviour();
-			 SequentialBehaviour seq4 = new SequentialBehaviour();
-				
-				seq1.addSubBehaviour(new sendMessageAE(at,bt,i));
-				seq1.addSubBehaviour(new receiveMessageAE());
-				seq2.addSubBehaviour(new sendMessageAJ(at,bt,i));
-				seq2.addSubBehaviour(new receiveMessageAJ());
-				seq3.addSubBehaviour(new sendMessageAH(at,bt,i));
-				seq3.addSubBehaviour(new receiveMessageAH());
-				seq4.addSubBehaviour(new sendMessageACL(at,bt,i));
-				seq4.addSubBehaviour(new receiveMessageACL());
-				
-				par.addSubBehaviour(seq1);
-				par.addSubBehaviour(seq2);
-				par.addSubBehaviour(seq3); 
-				par.addSubBehaviour(seq4); 
-				
-				myAgent.addBehaviour(par);
-				
-		}
-		
-		
-	}
+
 	/*
 	 * 
-	 * ->Man2 [Float,Equipa] Estado - Estado do jogo que a equipa vai ter, (descanso,etc)
-	 * ->Man2 [float,Equipa] Jogadores - Recebe score dos jogdres de uma equipa
-	 * ->Man2 [INT] Historico  - Int representa se a eq da casa ganha , perde ou empata
-	 * ->Man2 [INT,Equipa] Classificacao - Recebe a classificacao de uma equipa 
+	 * Behaviour principal de receber  
 	 * 
 	 */
 	private class ReceiveBehaviour extends CyclicBehaviour {
@@ -97,11 +63,16 @@ private float [][]  res;
 				}
 				                             
 			}
+			//else mandar not understood?
 			
 		}
 		}
 	
-	
+	/*
+	*
+	*Behaviours que recebem mensagens dos agentes 
+	*
+	*/
 	
 	private class receiveMessageAE extends ReceiveBehaviour{
 		
@@ -179,14 +150,12 @@ private float [][]  res;
 		
 		}
 	}
+
 	/*
-	 * Pede ao Man2 a informacao
-	 * ->M2 [Equipa] Estado   
-	 * ->M2 [Equipa] Jogadores
-	 * ->M2 [Equipa,Equipa] Historico
-	 * ->M2 [Equipa] Classificacao
-	 * 
-	 */
+	*
+	*Behaviours que mandam mensagens aos agentes 
+	*
+	*/
 	
 	
 	private class sendMessageAE extends OneShotBehaviour{
@@ -310,11 +279,16 @@ private float [][]  res;
 			
 		}
 	
+	/*
+	*
+	*Behaviour que manda liga ja com previsoes (e preve com os valores do res)
+	*
+	*/
 	private class sendMessageMan extends OneShotBehaviour{
 		LigaB liga;
 		public sendMessageMan(){
 			super();
-			this.liga= new LigaB();
+			this.liga=  ligacritic;
 		}
 		@Override 
 		public void action(){
@@ -337,5 +311,50 @@ private float [][]  res;
 		
 		
 	}
-
+	
+	/*
+	*
+	*encadeia todos os procedimentos para preencer um jogo no res 
+	*
+	*/
+	private class CriticBehaviour extends OneShotBehaviour{
+		String at ;
+		String bt;
+		int i;
+		int casa;
+	 public CriticBehaviour(int iv ,Equipa a, Equipa b , int casav) {
+			at = a.getNome();
+			bt = b.getNome();
+			casa = casav;
+			i = iv;
+			
+		}
+			@Override 
+			public void action(){
+				 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
+				 SequentialBehaviour seq1 = new SequentialBehaviour();
+				 SequentialBehaviour seq2 = new SequentialBehaviour();
+				 SequentialBehaviour seq3 = new SequentialBehaviour();
+				 SequentialBehaviour seq4 = new SequentialBehaviour();
+					
+					seq1.addSubBehaviour(new sendMessageAE(at,bt,i));
+					seq1.addSubBehaviour(new receiveMessageAE());
+					seq2.addSubBehaviour(new sendMessageAJ(at,bt,i));
+					seq2.addSubBehaviour(new receiveMessageAJ());
+					seq3.addSubBehaviour(new sendMessageAH(at,bt,i));
+					seq3.addSubBehaviour(new receiveMessageAH());
+					seq4.addSubBehaviour(new sendMessageACL(at,bt,i));
+					seq4.addSubBehaviour(new receiveMessageACL());
+					
+					par.addSubBehaviour(seq1);
+					par.addSubBehaviour(seq2);
+					par.addSubBehaviour(seq3); 
+					par.addSubBehaviour(seq4); 
+					
+					myAgent.addBehaviour(par);
+					
+			}
+			
+			
+		}
 }
