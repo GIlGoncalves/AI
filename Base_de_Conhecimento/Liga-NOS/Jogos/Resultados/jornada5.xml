@@ -1,48 +1,48 @@
 <?xml version="1.0"?>
 <resultados>	
 	<jogo>	
-		<equipa_casa>Nac. Madeira Nac. Madeira</equipa_casa>
+		<equipa_casa>CDN</equipa_casa>
 		<resultado>2-0</resultado>
-		<equipa_fora>Maritimo Maritimo</equipa_fora>
+		<equipa_fora>CSM</equipa_fora>
 	</jogo>
 	<jogo>	
-		<equipa_casa>Estoril Estoril</equipa_casa>
+		<equipa_casa>GDE</equipa_casa>
 		<resultado>2-0</resultado>
-		<equipa_fora>Moreirense Moreirense</equipa_fora>
+		<equipa_fora>MFC</equipa_fora>
 	</jogo>
 	<jogo>	
-		<equipa_casa>V. Setubal V. Setubal</equipa_casa>
+		<equipa_casa>VDS</equipa_casa>
 		<resultado>1-4</resultado>
-		<equipa_fora>Pacos Ferreira Pacos Ferreira</equipa_fora>
+		<equipa_fora>PDF</equipa_fora>
 	</jogo>
 	<jogo>	
-		<equipa_casa>Guimaraes Guimaraes</equipa_casa>
+		<equipa_casa>VFC</equipa_casa>
 		<resultado>1-1</resultado>
-		<equipa_fora>Os Belenenses Os Belenenses</equipa_fora>
+		<equipa_fora>CFB</equipa_fora>
 	</jogo>
 	<jogo>	
-		<equipa_casa>Boavista Boavista</equipa_casa>
+		<equipa_casa>BFC</equipa_casa>
 		<resultado>1-2</resultado>
-		<equipa_fora>Feirense Feirense</equipa_fora>
+		<equipa_fora>CDF</equipa_fora>
 	</jogo>
 	<jogo>	
-		<equipa_casa>Arouca Arouca</equipa_casa>
+		<equipa_casa>FCA</equipa_casa>
 		<resultado>0-1</resultado>
-		<equipa_fora>GD Chaves GD Chaves</equipa_fora>
+		<equipa_fora>GDC</equipa_fora>
 	</jogo>
 	<jogo>	
-		<equipa_casa>Tondela Tondela</equipa_casa>
+		<equipa_casa>CDT</equipa_casa>
 		<resultado>0-0</resultado>
-		<equipa_fora>Oporto Oporto</equipa_fora>
+		<equipa_fora>FCP</equipa_fora>
 	</jogo>
 	<jogo>	
-		<equipa_casa>Rio Ave Rio Ave</equipa_casa>
+		<equipa_casa>RAC</equipa_casa>
 		<resultado>3-1</resultado>
-		<equipa_fora>Sp. Portugal Sp. Portugal</equipa_fora>
+		<equipa_fora>SCP</equipa_fora>
 	</jogo>
 	<jogo>	
-		<equipa_casa>Benfica Benfica</equipa_casa>
+		<equipa_casa>SLB</equipa_casa>
 		<resultado>3-1</resultado>
-		<equipa_fora>Braga Braga</equipa_fora>
+		<equipa_fora>SCB</equipa_fora>
 	</jogo>
 </resultados>
