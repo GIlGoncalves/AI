@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<equipa>
+	<nome_completo>Futebol Clube Arouca</nome_completo>
+	<jogadores>
+		<jogador>
+			<nome>BRACALLI Rafael</nome>
+			<posicao>GR</posicao>
+			<idade>35</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SACRAMENTO Rui</nome>
+			<posicao>GR</posicao>
+			<idade>31</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>ROCHA Igor</nome>
+			<posicao>GR</posicao>
+			<idade>23</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>GEGE Admilson</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>NELSINHO Barbosa</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>BRITO Vitor</nome>
+			<posicao>DEF</posicao>
+			<idade>22</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>COSTA V&#xED;tor</nome>
+			<posicao>DEF</posicao>
+			<idade>21</idade>
+			<valor>70</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>COELHO Nuno</nome>
+			<posicao>DEF</posicao>
+			<idade>29</idade>
+			<valor>84</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>BASTO Hugo</nome>
+			<posicao>DEF</posicao>
+			<idade>23</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>VELAZQUEZ Jose</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>JUBAL Rocha</nome>
+			<posicao>DEF</posicao>
+			<idade>23</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>LUIS Anderson</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SANTOS Andre</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>84</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>GOIANO Adilson</nome>
+			<posicao>MED</posicao>
+			<idade>28</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>KARL Vedova</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>AZEVEDO Alex</nome>
+			<posicao>MED</posicao>
+			<idade>19</idade>
+			<valor>70</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>MOREIRA Artur</nome>
+			<posicao>MED</posicao>
+			<idade>32</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>VALENTE Nuno</nome>
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>CRIVELLARO Rafael</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>MATEUS Galiano</nome>
+			<posicao>MED</posicao>
+			<idade>32</idade>
+			<valor>84</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>ZEQUINHA Branco</nome>
+			<posicao>MED</posicao>
+			<idade>29</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>KUCA Miranda</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SILVA Sancidino</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>INTIMA Jorginho</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>73</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>LOPES Bruno</nome>
+			<posicao>AVA</posicao>
+			<idade>21</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>DE JESUS Marlon</nome>
+			<posicao>AVA</posicao>
+			<idade>25</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>GONZALEZ Walter</nome>
+			<posicao>AVA</posicao>
+			<idade>21</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>TUCKA Soares</nome>
+			<posicao>AVA</posicao>
+			<idade>20</idade>
+			<valor>72</valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>
