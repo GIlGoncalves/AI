@@ -5,7 +5,10 @@
  */
 package ai;
 
+import java.io.IOException;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -185,10 +188,14 @@ public class Inicio extends javax.swing.JFrame {
             
             
             
-            //this.leitura.lerJogadores(equipas[0]);
-            //this.leitura.lerJogadores(equipas[1]);
-            
-           System.out.println( this.leitura.lerJornadas(equipas[0]));
+            try {
+                //this.leitura.lerJogadores(equipas[0]);
+                //this.leitura.lerJogadores(equipas[1]);
+
+                System.out.println( this.leitura.lerJornadas(equipas[0]));
+            } catch (IOException ex) {
+                Logger.getLogger(Inicio.class.getName()).log(Level.SEVERE, null, ex);
+            }
             
         }
         

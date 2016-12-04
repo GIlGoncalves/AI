@@ -18,11 +18,11 @@ import org.xml.sax.SAXException;
  * @author gil
  */
 public class Leitura {
-    
+    private int count;
     
     
     public Leitura() {
-        
+        this.count=0;
         
     }
     
@@ -81,14 +81,33 @@ public class Leitura {
     Devolve a sigla da equipa e os respectivos pontos
     */
     
+    private void getFile(String dirPath) {
+        this.count=0;
+    URL path = Leitura.class.getResource(dirPath);
+    File f = new File(path.getFile());
+    File[] files = f.listFiles();
+   
+
+    if (files != null)
+    for (File file1 : files) {
+        this.count++;
+         
+        File file = file1;
+        if (file.isDirectory()) {
+            getFile(file.getAbsolutePath()); 
+        }
+    }
+}
     
-public int lerJornadas(String equipaCasa) throws IOException {
+public int lerJornadas(String equipaCasa) throws IOException{
+        
     
          int pontosCasa=0;
          
          int i=1;
+        getFile("./Liga-NOS/Jogos/Resultados/");
         
-         while(i<=11) {
+         while(i<=this.count) {
         
              try{
             
