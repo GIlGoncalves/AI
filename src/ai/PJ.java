@@ -31,7 +31,7 @@ public class PJ  extends Agent{
 				try {
 					newliga = (LigaB) msg.getContentObject();
 					SequentialBehaviour seq = new SequentialBehaviour();
-					//Inserir na liga 
+					
 					seq.addSubBehaviour(new sendMessage(newliga));
 					myAgent.addBehaviour(seq);
 				} catch (Exception e) {
@@ -59,6 +59,8 @@ public class PJ  extends Agent{
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("JOGOS");
 			try {
+				//Inserir na liga  as  predictions com as Equipas a e B ,  o int diz se a equipa a joga em casa ou ao e o resultado a 0
+				
 				msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
