@@ -6,6 +6,11 @@ import java.io.Serializable;
 import sun.util.calendar.LocalGregorianCalendar.Date;
 
 public class LigaB implements Serializable{
+	
+	public  String nome;
+	public HashSet<Prediction> Jogos;
+	public Date data;
+	
 	public LigaB(){
 		this.nome = "tbd";
 		Jogos = new HashSet<>();
@@ -16,7 +21,5 @@ public class LigaB implements Serializable{
 		Jogos = new HashSet<>();
 		//data = agora ?
 	}
-public  String nome;
-	public HashSet<Prediction> Jogos;
-	public Date data;
+
 }

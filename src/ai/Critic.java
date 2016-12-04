@@ -39,7 +39,7 @@ private float [][]  res;
 		@Override
 		public void action(){
 			MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.REQUEST);
-			MessageTemplate mtC = MessageTemplate.MatchOntology("Critica");
+			MessageTemplate mtC = MessageTemplate.MatchOntology("CRITIC");
 			MessageTemplate mtRespCritico = MessageTemplate.and(mt, mtC);
 			ACLMessage msg = receive(mtRespCritico);
 			
@@ -52,7 +52,7 @@ private float [][]  res;
 					SequentialBehaviour seq = new SequentialBehaviour();
 					 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
 					for(Prediction a : newliga.Jogos){
-						par.addSubBehaviour(new CriticBehaviour(i,a.A,a.B,a.Casa) );
+						par.addSubBehaviour(new CriticBehaviour(i,a.siglaA,a.siglaB,a.Casa) );
 						i++;
 					}
 					seq.addSubBehaviour(par);
@@ -297,7 +297,7 @@ private float [][]  res;
 			AID receiver = new AID();
 			receiver.setLocalName("Man1");
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
-			msg.setOntology("Critica");
+			msg.setOntology("CRITIC");
 			try {
 				msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);
@@ -322,9 +322,9 @@ private float [][]  res;
 		String bt;
 		int i;
 		int casa;
-	 public CriticBehaviour(int iv ,Equipa a, Equipa b , int casav) {
-			at = a.getNome();
-			bt = b.getNome();
+	 public CriticBehaviour(int iv ,String a, String b , int casav) {
+			at = a;
+			bt = b;
 			casa = casav;
 			i = iv;
 			

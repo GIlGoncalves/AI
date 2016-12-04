@@ -51,6 +51,8 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("JOGADORES");
 			msg.setConversationId(id);
+			//
+			
 			// meter o conteudo como sendo o calculo e 	msg.setContent("");
 				msg.addReceiver(receiver);
 				myAgent.send(msg);

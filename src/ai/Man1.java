@@ -77,7 +77,7 @@ public HashSet<LigaB> apostas;
 		public void action(){
 		
 		MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
-		MessageTemplate mtJ = MessageTemplate.MatchOntology("Jogos");
+		MessageTemplate mtJ = MessageTemplate.MatchOntology("JOGOS");
 		MessageTemplate mtRespJogo = MessageTemplate.and(mt, mtJ);
 		ACLMessage msg = receive(mtRespJogo);
 		
@@ -106,7 +106,7 @@ public HashSet<LigaB> apostas;
 		public void action(){
 		
 		MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
-		MessageTemplate mtC = MessageTemplate.MatchOntology("Critica");
+		MessageTemplate mtC = MessageTemplate.MatchOntology("CRITIC");
 		MessageTemplate mtRespCritico = MessageTemplate.and(mt, mtC);
 		ACLMessage msg = receive(mtRespCritico);
 		
@@ -148,7 +148,7 @@ public HashSet<LigaB> apostas;
 			AID receiver = new AID();
 			receiver.setLocalName("PJ");
 			ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
-			msg.setOntology("Jogos");
+			msg.setOntology("JOGOS");
 			try {
 				msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);
@@ -174,7 +174,7 @@ public HashSet<LigaB> apostas;
 			AID receiver = new AID();
 			receiver.setLocalName("Critic");
 			ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
-			msg.setOntology("Critica");
+			msg.setOntology("CRITIC");
 			try {
 				msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);
