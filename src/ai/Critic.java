@@ -52,7 +52,7 @@ private float [][]  res;
 					SequentialBehaviour seq = new SequentialBehaviour();
 					 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
 					for(Prediction a : newliga.Jogos){
-						par.addSubBehaviour(new CriticBehaviour(i,a.A,a.B,a.Casa) );
+						par.addSubBehaviour(new CriticBehaviour(i,a.siglaA,a.siglaB,a.Casa) );
 						i++;
 					}
 					seq.addSubBehaviour(par);
@@ -322,9 +322,9 @@ private float [][]  res;
 		String bt;
 		int i;
 		int casa;
-	 public CriticBehaviour(int iv ,Equipa a, Equipa b , int casav) {
-			at = a.getNome();
-			bt = b.getNome();
+	 public CriticBehaviour(int iv ,String a, String b , int casav) {
+			at = a;
+			bt = b;
 			casa = casav;
 			i = iv;
 			
