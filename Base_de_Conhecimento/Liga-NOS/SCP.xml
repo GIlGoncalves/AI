@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<equipa>
+	<nome_completo>Sporting Clube de Portugal</nome_completo>
+	<jogadores>
+		<jogador>
+			<nome>PATRICIO Rui</nome>
+			<posicao>GR</posicao>
+			<idade>28</idade>
+			<valor>91</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>BETO Pimparel</nome>
+			<posicao>GR</posicao>
+			<idade>34</idade>
+			<valor>87</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>JUG Azbe</nome>
+			<posicao>GR</posicao>
+			<idade>24</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>CESAR Bruno</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>JEFFERSON Nascimento</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>ZEEGELAAR Marvin</nome>
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>PAULISTA Bruno</nome>
+			<posicao>DEF</posicao>
+			<idade>21</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>OLIVEIRA Paulo</nome>
+			<posicao>DEF</posicao>
+			<idade>24</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>DOUGLAS Teixeira</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>87</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>COATES Sebastian</nome>
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>87</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>SEMEDO R&#xFA;ben</nome>
+			<posicao>DEF</posicao>
+			<idade>22</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>SAMBA Mamadu</nome>
+			<posicao>DEF</posicao>
+			<idade>24</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>SCHELOTTO Ezequiel</nome>
+			<posicao>DEF</posicao>
+			<idade>27</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>PEREIRA Joao</nome>
+			<posicao>DEF</posicao>
+			<idade>32</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>ESGAIO Ricardo</nome>
+			<posicao>DEF</posicao>
+			<idade>23</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>CARVALHO William</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>90</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>SILVA Adrien</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>90</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>ELIAS Mendes</nome>
+			<posicao>MED</posicao>
+			<idade>31</idade>
+			<valor>89</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>PETROVIC Radosav</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>86</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>MELI Marcelo</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>86</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>RUIZ Bryan</nome>
+			<posicao>MED</posicao>
+			<idade>31</idade>
+			<valor>89</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>MARKOVIC Lazar</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>CAMPBELL Joel</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>87</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>RUIZ Alan</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>86</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>MARTINS Gelson</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>PEREIRA Matheus</nome>
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>CASTAIGNOS Luc</nome>
+			<posicao>AVA</posicao>
+			<idade>24</idade>
+			<valor>87</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>SPALVIS Lukas</nome>
+			<posicao>AVA</posicao>
+			<idade>22</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>DOST Bas</nome>
+			<posicao>AVA</posicao>
+			<idade>27</idade>
+			<valor>89</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>ANDRE Souza</nome>
+			<posicao>AVA</posicao>
+			<idade>26</idade>
+			<valor>86</valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>

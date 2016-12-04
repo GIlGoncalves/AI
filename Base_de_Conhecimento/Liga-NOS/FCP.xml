@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<equipa>
+	<nome_completo>Futebol Clube do Porto</nome_completo>
+	<jogadores>	
+		<jogador>
+			<nome>CASILLAS Iker</nome>
+			<posicao>GR</posicao>
+			<idade>35</idade>
+			<valor>90</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>SA Jose</nome>
+			<posicao>GR</posicao>
+			<idade>23</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>LAYUN Miguel</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>89</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>MARCANO Ivan</nome>
+			<posicao>DEF</posicao>
+			<idade>29</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>TELLES Alex</nome>
+			<posicao>DEF</posicao>
+			<idade>23</idade>
+			<valor>87</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>FELIPE Monteiro</nome>
+			<posicao>DEF</posicao>
+			<idade>27</idade>
+			<valor>87</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>BOLY Willy</nome>
+			<posicao>DEF</posicao>
+			<idade>25</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>CHIDOZIE Awaziem</nome>
+			<posicao>DEF</posicao>
+			<idade>19</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>PEREIRA Maxi</nome>
+			<posicao>DEF</posicao>
+			<idade>32</idade>
+			<valor>90</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>HERRERA Hector</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>90</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>PEREIRA Danilo</nome>
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>90</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>ANDRE Andre</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>NEVES Ruben</nome>
+			<posicao>MED</posicao>
+			<idade>19</idade>
+			<valor>86</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>OLIVEIRA Sergio</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>TORRES Oliver</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>EVANDRO Goebel</nome>
+			<posicao>MED</posicao>
+			<idade>30</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>OTAVIO Monteiro</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>CARLOS Jo&#xE3;o</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>BRAHIMI Yacine</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>91</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>CORONA Jesus</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>89</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>LOPEZ Adrian</nome>
+			<posicao>MED</posicao>
+			<idade>28</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>VARELA Silvestre</nome>
+			<posicao>MED</posicao>
+			<idade>31</idade>
+			<valor>87</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>JOTA Diogo</nome>
+			<posicao>MED</posicao>
+			<idade>19</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>SILVA Andre</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>DEPOITRE Laurent</nome>
+			<posicao>AVA</posicao>
+			<idade>27</idade>
+			<valor>88</valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>

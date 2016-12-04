@@ -1,8 +1,9 @@
+<?xml version="1.0"?>
 <equipa>
 	<nome_completo>Sport Lisboa e Benfica</nome_completo>
 	<jogadores>
 		<jogador>
-			<nome>Júlio CESAR</nome>
+			<nome>Julio CESAR</nome>
 			<posicao>GR</posicao>
 			<idade>37</idade>
 			<valor>89</valor>
@@ -30,14 +31,14 @@
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>André ALMEIDA</nome>
+			<nome>Andre ALMEIDA</nome>
 			<posicao>DEF</posicao>
 			<idade>26</idade>
 			<valor>87</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>Álex GRIMALDO</nome>
+			<nome>Alex GRIMALDO</nome>
 			<posicao>DEF</posicao>
 			<idade>21</idade>
 			<valor>83</valor>
@@ -51,42 +52,42 @@
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>Ânderson LUISÃO</nome>
+			<nome>Anderson LUISAO</nome>
 			<posicao>DEF</posicao>
 			<idade>35</idade>
 			<valor>89</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>Lisandro LÓPEZ</nome>
+			<nome>Lisandro LOPEZ</nome>
 			<posicao>DEF</posicao>
 			<idade>27</idade>
 			<valor>88</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>Victor LINDELÖF</nome>
+			<nome>Victor LINDELOF</nome>
 			<posicao>DEF</posicao>
 			<idade>22</idade>
 			<valor>87</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>Rúben DIAS</nome>
+			<nome>Ruben DIAS</nome>
 			<posicao>DEF</posicao>
 			<idade>19</idade>
 			<valor>78</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>Rúben AMORIM</nome>
+			<nome>Ruben AMORIM</nome>
 			<posicao>DEF</posicao>
 			<idade>31</idade>
 			<valor>87</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>Nélson SEMEDO</nome>
+			<nome>Nelson SEMEDO</nome>
 			<posicao>DEF</posicao>
 			<idade>23</idade>
 			<valor>85</valor>
@@ -114,7 +115,7 @@
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>Luís PIZZI</nome>
+			<nome>Luis PIZZI</nome>
 			<posicao>MED</posicao>
 			<idade>27</idade>
 			<valor>89</valor>
@@ -128,14 +129,14 @@
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>André HORTA</nome>
+			<nome>Andre HORTA</nome>
 			<posicao>MED</posicao>
 			<idade>20</idade>
 			<valor>83</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>André CARRILLO</nome>
+			<nome>Andre CARRILLO</nome>
 			<posicao>MED</posicao>
 			<idade>25</idade>
 			<valor>89</valor>
@@ -156,21 +157,21 @@
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>Raúl JIMÉNEZ</nome>
+			<nome>Raul JIMENEZ</nome>
 			<posicao>MED</posicao>
 			<idade>25</idade>
 			<valor>88</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>Andrija ŽIVKOVIĆ</nome>
+			<nome>Andrija ZIVKOVIC</nome>
 			<posicao>MED</posicao>
 			<idade>20</idade>
 			<valor>85</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>Gonçalo GUEDES</nome>
+			<nome>Goncalo GUEDES</nome>
 			<posicao>MED</posicao>
 			<idade>19</idade>
 			<valor>85</valor>
@@ -184,21 +185,21 @@
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>José GOMES</nome>
+			<nome>Jose GOMES</nome>
 			<posicao>MED</posicao>
 			<idade>17</idade>
 			<valor>73</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>Gonçalves JONAS</nome>
-			<posicao>MED</posicao>
+			<nome>Goncalves JONAS</nome>
+			<posicao>AVA</posicao>
 			<idade>32</idade>
 			<valor>90</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>Luka JOVIĆ</nome>
+			<nome>Luka JOVIC</nome>
 			<posicao>AVA</posicao>
 			<idade>18</idade>
 			<valor>82</valor>

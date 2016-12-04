@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<equipa>
+	<nome_completo>Pacos de Ferreira</nome_completo>
+	<jogadores>		
+		<jogador>	
+			<nome>FELGUEIRAS Mario</nome>
+			<posicao>GR</posicao>
+			<idade>29</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>DEFENDI Rafael</nome>
+			<posicao>GR</posicao>
+			<idade>32</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>PINHO Joao</nome>
+			<posicao>GR</posicao>
+			<idade>24</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>YERJET Yeerzati</nome>
+			<posicao>GR</posicao>
+			<idade>23</idade>
+			<valor>70</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>FERREIRA Filipe</nome>
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>GOIS Joao</nome>
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>HENRIQUE Paulo</nome>
+			<posicao>DEF</posicao>
+			<idade>20</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>RICARDO Jorge</nome>
+			<posicao>DEF</posicao>
+			<idade>36</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>ROMEU Rocha</nome>
+			<posicao>DEF</posicao>
+			<idade>30</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>VIEIRA Miguel</nome>
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>BAIXINHO Marco</nome>
+			<posicao>DEF</posicao>
+			<idade>27</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>MONTEIRO Pedro</nome>
+			<posicao>DEF</posicao>
+			<idade>22</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>SANTOS Bruno</nome>
+			<posicao>DEF</posicao>
+			<idade>23</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>AFONSO Francisco</nome>
+			<posicao>DEF</posicao>
+			<idade>19</idade>
+			<valor>73</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>SILVA Leandro</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>CHRISTIAN Fiel</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>SILVA Mateus</nome>
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>MOREIRA Pedrinho</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>LEAL Andre</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>MINHOCA Nelson</nome>
+			<posicao>MED</posicao>
+			<idade>28</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>SOUSA Andre</nome>
+			<posicao>MED</posicao>
+			<idade>19</idade>
+			<valor>70</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>VALENTE Ricardo</nome>
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>RODRIGUES Ivo</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>ROCHA Vasco</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>GLEISON Wilson</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>BARNES Osei</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>WELTHON Fiel</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>SHI Tang</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>CICERO Semedo</nome>
+			<posicao>AVA</posicao>
+			<idade>30</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>RABIOLA Tiago</nome>
+			<posicao>AVA</posicao>
+			<idade>27</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>
