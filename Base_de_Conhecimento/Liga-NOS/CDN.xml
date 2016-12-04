@@ -1,211 +1,212 @@
+<?xml version="1.0"?>
 <equipa>
 	<nome_completo>Clube Desportivo Nacional</nome_completo>
 	<jogadores>
 		<jogador>
-			<nome>BOLAT, Sinan</nome>
+			<nome>BOLAT Sinan</nome>
 			<posicao>GR</posicao>
 			<idade>28</idade>
 			<valor>82</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>AGRA, Salvador</nome>
+			<nome>AGRA Salvador</nome>
 			<posicao>MED</posicao>
 			<idade>25</idade>
 			<valor>85</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>GOMES, Ricardo</nome>
+			<nome>GOMES Ricardo</nome>
 			<posicao>MED</posicao>
 			<idade>24</idade>
 			<valor>82</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>GONÇALVES, Vítor</nome>
+			<nome>GONCALVES Vitor</nome>
 			<posicao>MED</posicao>
 			<idade>24</idade>
 			<valor>82</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>JOTA, Garcês</nome>
+			<nome>JOTA Garces</nome>
 			<posicao>MED</posicao>
 			<idade>23</idade>
 			<valor>82</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>FIGUEIREDO, Tobias</nome>
+			<nome>FIGUEIREDO Tobias</nome>
 			<posicao>DEF</posicao>
 			<idade>22</idade>
 			<valor>82</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>GARCÍA, Victor</nome>
+			<nome>GARCIA Victor</nome>
 			<posicao>DEF</posicao>
 			<idade>22</idade>
 			<valor>80</valor>
 			<status>1</status>
 		</jogador>	
 		<jogador>
-			<nome>RODRIGUES, Tiago</nome>
+			<nome>RODRIGUES Tiago</nome>
 			<posicao>MED</posicao>
 			<idade>24</idade>
 			<valor>84</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>SEQUEIRA, Nuno</nome>
+			<nome>SEQUEIRA Nuno</nome>
 			<posicao>DEF</posicao>
 			<idade>26</idade>
 			<valor>82</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>GHAZAL, Ali</nome>
+			<nome>GHAZAL Ali</nome>
 			<posicao>DEF</posicao>
 			<idade>24</idade>
 			<valor>85</valor>
 			<status>1</status>
 		</jogador>	
 		<jogador>
-			<nome>MARTINS, César</nome>
+			<nome>MARTINS Cesar</nome>
 			<posicao>DEF</posicao>
 			<idade>23</idade>
 			<valor>83</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>CÁDIZ, Jhonder</nome>
+			<nome>CADIZ Jhonder</nome>
 			<posicao>AVA</posicao>
 			<idade>21</idade>
 			<valor>78</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>WILLYAN, Barbosa</nome>
+			<nome>WILLYAN Barbosa</nome>
 			<posicao>MED</posicao>
 			<idade>22</idade>
 			<valor>82</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>SILVA, Rui</nome>
+			<nome>SILVA Rui</nome>
 			<posicao>GR</posicao>
 			<idade>22</idade>
 			<valor>82</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>CAMPOS, Nuno</nome>
+			<nome>CAMPOS Nuno</nome>
 			<posicao>DEF</posicao>
 			<idade>23</idade>
 			<valor>78</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>BONILLA, Nelson</nome>
+			<nome>BONILLA Nelson</nome>
 			<posicao>AVA</posicao>
 			<idade>26</idade>
 			<valor>80</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>SÃO BENTO, Vítor</nome>
+			<nome>S&#xC3;O BENTO Vitor</nome>
 			<posicao>GR</posicao>
 			<idade>24</idade>
 			<valor>76</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>CORREIA, Rui</nome>
+			<nome>CORREIA Rui</nome>
 			<posicao>DEF</posicao>
 			<idade>26</idade>
 			<valor>82</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>SANTANA, Washington</nome>
+			<nome>SANTANA Washington</nome>
 			<posicao>MED</posicao>
 			<idade>27</idade>
 			<valor>82</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>PAULINHO, Modesto</nome>
+			<nome>PAULINHO Modesto</nome>
 			<posicao>MED</posicao>
 			<idade>23</idade>
 			<valor>75</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>WITI, João</nome>
+			<nome>WITI Joao</nome>
 			<posicao>MED</posicao>
 			<idade>20</idade>
 			<valor>78</valor>
 			<status>1</status>
 		</jogador>	
 		<jogador>
-			<nome>RONIEL, Costa</nome>
+			<nome>RONIEL Costa</nome>
 			<posicao>MED</posicao>
 			<idade>22</idade>
 			<valor>77</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>CERQUEIRA, Mauro</nome>
+			<nome>CERQUEIRA Mauro</nome>
 			<posicao>DEF</posicao>
 			<idade>24</idade>
 			<valor>75</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>MATSIMBE, Geraldo</nome>
+			<nome>MATSIMBE Geraldo</nome>
 			<posicao>MED</posicao>
 			<idade>24</idade>
 			<valor>73</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>HAMZAOUI, Okacha</nome>
+			<nome>HAMZAOUI Okacha</nome>
 			<posicao>MED</posicao>
 			<idade>25</idade>
 			<valor>78</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>FRAMELIN, Ohoulo</nome>
+			<nome>FRAMELIN Ohoulo</nome>
 			<posicao>GR</posicao>
 			<idade>20</idade>
 			<valor>73</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>JANUÁRIO, Bheu</nome>
+			<nome>JANUARIO Bheu</nome>
 			<posicao>DEF</posicao>
 			<idade>23</idade>
 			<valor>70</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>ALÍRIO, Rodrigo</nome>
+			<nome>ALIRIO Rodrigo</nome>
 			<posicao>DEF</posicao>
 			<idade>18</idade>
 			<valor>70</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>HUGO, Vítor</nome>
+			<nome>HUGO Vitor</nome>
 			<posicao>MED</posicao>
 			<idade>21</idade>
 			<valor>70</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>
-			<nome>MARNA, João</nome>
+			<nome>MARNA Joao</nome>
 			<posicao>AVA</posicao>
 			<idade>19</idade>
 			<valor>70</valor>

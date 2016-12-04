@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<equipa>
+	<nome_completo>Rio Ave</nome_completo>
+	<jogadores>
+		<jogador>
+			<nome>CASSIO Albuquerque</nome>
+			<posicao>GR</posicao>
+			<idade>36</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>VIEIRA Rui</nome>
+			<posicao>GR</posicao>
+			<idade>25</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>ALVES Carlos</nome>
+			<posicao>GR</posicao>
+			<idade>18</idade>
+			<valor>70</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>SOARES Rafa</nome>
+			<posicao>DEF</posicao>
+			<idade>21</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>ANDRE Tiago</nome>
+			<posicao>DEF</posicao>
+			<idade>19</idade>
+			<valor>70</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>MARCELO Ferreira</nome>
+			<posicao>DEF</posicao>
+			<idade>27</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>RODERICK Miranda</nome>
+			<posicao>DEF</posicao>
+			<idade>25</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>CAPELA An&#xED;bal</nome>
+			<posicao>DEF</posicao>
+			<idade>25</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>MONTE Nelson</nome>
+			<posicao>DEF</posicao>
+			<idade>21</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>VILAS BOAS Andre</nome>
+			<posicao>DEF</posicao>
+			<idade>33</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>PEDRINHO Miguel</nome>
+			<posicao>DEF</posicao>
+			<idade>31</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>CASSAMA Eliseu</nome>
+			<posicao>DEF</posicao>
+			<idade>22</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>TARANTINI Ricardo</nome>
+			<posicao>MED</posicao>
+			<idade>33</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>WAKASO Alhassan</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>84</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>AUGUSTO Filipe</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>MOREIRA Pedro</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>LEANDRINHO Silva</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>RIBEIRO R&#xFA;ben</nome>
+			<posicao>MED</posicao>
+			<idade>29</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>KROVINOVI&#x106; Filip</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>NOVAIS Jo&#xE3;o</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>JAIME Pinto</nome>
+			<posicao>MED</posicao>
+			<idade>19</idade>
+			<valor>72</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>VITOR Ferreira</nome>
+			<posicao>MED</posicao>
+			<idade>19</idade>
+			<valor>72</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>HELDON Ramos</nome>
+			<posicao>MED</posicao>
+			<idade>28</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>GUEDES Helder</nome>
+			<posicao>MED</posicao>
+			<idade>29</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>KIZITO William</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>DIAS Gil</nome>
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>YAZALDE Gomes</nome>
+			<posicao>AVA</posicao>
+			<idade>28</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>CHERIF Tafsir</nome>
+			<posicao>AVA</posicao>
+			<idade>21</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>RONAN Jeronimo</nome>
+			<posicao>AVA</posicao>
+			<idade>21</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>

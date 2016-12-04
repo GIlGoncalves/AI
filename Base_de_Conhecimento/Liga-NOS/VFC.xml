@@ -1,194 +1,201 @@
 <?xml version="1.0"?>
 <equipa>
-	<nome_completo>Clube Desportivo Tondela</nome_completo>
-	<jogadores>
+	<nome_completo>Vitoria de Guimaraes</nome_completo>
+	<jogadores>		
 		<jogador>	
-			<nome>RAMOS Claudio</nome>
-			<posicao>GR</posicao>
-			<idade>25</idade>
-			<valor>80</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>JANOTA Ricardo</nome>
-			<posicao>GR</posicao>
-			<idade>29</idade>
-			<valor>76</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>BATISTA Miguel</nome>
+			<nome>SILVA Miguel</nome>
 			<posicao>GR</posicao>
 			<idade>21</idade>
-			<valor>70</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>BRUNO David</nome>
-			<posicao>DEF</posicao>
-			<idade>24</idade>
-			<valor>80</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>NUNES Fabio</nome>
-			<posicao>DEF</posicao>
-			<idade>24</idade>
-			<valor>78</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>MAMADU Cande</nome>
-			<posicao>DEF</posicao>
-			<idade>26</idade>
-			<valor>78</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>KAK&#xC1; Claudiano</nome>
-			<posicao>DEF</posicao>
-			<idade>35</idade>
-			<valor>82</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>TAMBE Alassane</nome>
-			<posicao>DEF</posicao>
-			<idade>24</idade>
-			<valor>80</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>AMORIM Rafael</nome>
-			<posicao>DEF</posicao>
-			<idade>29</idade>
-			<valor>80</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>LYSTSOV Vitali</nome>
-			<posicao>DEF</posicao>
-			<idade>21</idade>
-			<valor>78</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>PICA Jo&#xE3;o</nome>
-			<posicao>DEF</posicao>
-			<idade>30</idade>
-			<valor>77</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>JAILSON Araujo</nome>
-			<posicao>DEF</posicao>
-			<idade>25</idade>
-			<valor>82</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>TAVARES Helder</nome>
-			<posicao>MED</posicao>
-			<idade>26</idade>
-			<valor>82</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>GON&#xC7;ALVES Claude</nome>
-			<posicao>MED</posicao>
-			<idade>22</idade>
-			<valor>80</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>MONTEIRO Bruno</nome>
-			<posicao>MED</posicao>
-			<idade>32</idade>
-			<valor>80</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>JAQUITE Jo&#xE3;o</nome>
-			<posicao>MED</posicao>
-			<idade>20</idade>
-			<valor>70</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>FERREIRA Fernando</nome>
-			<posicao>MED</posicao>
-			<idade>30</idade>
 			<valor>83</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>	
-			<nome>CARDOSO Miguel</nome>
-			<posicao>MED</posicao>
-			<idade>22</idade>
-			<valor>78</valor>
+			<nome>JESUS Douglas</nome>
+			<posicao>GR</posicao>
+			<idade>33</idade>
+			<valor>83</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>	
-			<nome>WAGNER Andrade</nome>
-			<posicao>MED</posicao>
-			<idade>29</idade>
-			<valor>80</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>MURILLO Jhon</nome>
-			<posicao>MED</posicao>
+			<nome>GEORGEMY Goncalves</nome>
+			<posicao>GR</posicao>
 			<idade>21</idade>
-			<valor>80</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>CANTANHEDE Bruno</nome>
-			<posicao>MED</posicao>
-			<idade>23</idade>
-			<valor>78</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>PITE Luis</nome>
-			<posicao>MED</posicao>
-			<idade>22</idade>
-			<valor>78</valor>
-			<status>1</status>
-		</jogador>
-		<jogador>	
-			<nome>CORREIA Jose</nome>
-			<posicao>MED</posicao>
-			<idade>20</idade>
 			<valor>75</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>	
-			<nome>OLIVERA Murilo</nome>
-			<posicao>MED</posicao>
-			<idade>20</idade>
-			<valor>70</valor>
+			<nome>FERREIRA Ruben</nome>
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>85</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>	
-			<nome>FLORES Dylan</nome>
+			<nome>ALEX Freitas</nome>
+			<posicao>DEF</posicao>
+			<idade>25</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>GASPAR Bruno</nome>
+			<posicao>DEF</posicao>
+			<idade>22</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>HENRIQUE Pedro</nome>
+			<posicao>DEF</posicao>
+			<idade>23</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>SA Josue</nome>
+			<posicao>DEF</posicao>
+			<idade>24</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>GOUANO Prince</nome>
+			<posicao>DEF</posicao>
+			<idade>22</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>MORENO Joao</nome>
+			<posicao>DEF</posicao>
+			<idade>35</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>AURELIO Joao</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>MIRANDA Rafael</nome>
+			<posicao>MED</posicao>
+			<idade>32</idade>
+			<valor>84</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>ZUNGU Bongani</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>MBEMBA Nolan</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>MENSAH Bernard</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>PHETE Thibang</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>PEDRO Joao</nome>
 			<posicao>MED</posicao>
 			<idade>23</idade>
 			<valor>78</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>	
-			<nome>MORENO Erik</nome>
-			<posicao>AVA</posicao>
+			<nome>MAREGA Moussa</nome>
+			<posicao>MED</posicao>
 			<idade>25</idade>
-			<valor>82</valor>
+			<valor>85</valor>
 			<status>1</status>
 		</jogador>
 		<jogador>	
-			<nome>CRISLAN Henrique</nome>
+			<nome>TOZE Pinheiro</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>HERNANI Fortes</nome>
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>84</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>HURTADO Paolo</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>RAPHINHA Belloli</nome>
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>SILVA Alexandre</nome>
+			<posicao>MED</posicao>
+			<idade>19</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>TEXEIRA David</nome>
 			<posicao>AVA</posicao>
-			<idade>24</idade>
+			<idade>25</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>SOARES Tiquinho</nome>
+			<posicao>AVA</posicao>
+			<idade>25</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>MENDES Bruno</nome>
+			<posicao>AVA</posicao>
+			<idade>22</idade>
 			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>VIGARIO Joao</nome>
+			<posicao>AVA</posicao>
+			<idade>21</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>FRANCI Valmir</nome>
+			<posicao>AVA</posicao>
+			<idade>26</idade>
+			<valor>73</valor>
 			<status>1</status>
 		</jogador>
 	</jogadores>
