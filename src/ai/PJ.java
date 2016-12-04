@@ -1,8 +1,12 @@
 package ai;
 import jade.core.*;
 import jade.core.behaviours.CyclicBehaviour;
+import jade.core.behaviours.OneShotBehaviour;
+import jade.core.behaviours.SequentialBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
+import jade.lang.acl.MessageTemplate;
+
 //Agente que procura os jogos de uma liga 
 public class PJ  extends Agent{
 
@@ -11,79 +15,63 @@ public class PJ  extends Agent{
 		this.addBehaviour(new ReceiveBehaviour());
 	}
 	
-	/*
-	 * 
-	 * ->Man1 [LigaB] Jogos
-	 * 
-	 */
+	
 	private class ReceiveBehaviour extends CyclicBehaviour {
 		
 		@Override
 		public void action(){
-			ACLMessage msg = receive();
+			
+			MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.REQUEST);
+			MessageTemplate mtJ = MessageTemplate.MatchOntology("Jogos");
+			MessageTemplate mtRespJogo = MessageTemplate.and(mt, mtJ);
+			ACLMessage msg = receive(mtRespJogo);
+			
 			if(msg != null){
-				/*
-				System.out.println("Ola mano " + msg.getSender() + "eu acho que " + msg.getContent());
-				ACLMessage rsp = msg.createReply();
+				LigaB newliga;
+				try {
+					newliga = (LigaB) msg.getContentObject();
+					SequentialBehaviour seq = new SequentialBehaviour();
+					//Inserir na liga 
+					seq.addSubBehaviour(new sendMessage(newliga));
+					myAgent.addBehaviour(seq);
+				} catch (Exception e) {
+					// Nao deu
+				}
 				
-				if(msg.getContent().equals("Ping")){
-					
-					rsp.setContent("Pong");
-					rsp.setPerformative(ACLMessage.INFORM);
-				}
-				else if(msg.getContent().equals("Pong")){
-					rsp.setContent("Ping");
-					rsp.setPerformative(ACLMessage.INFORM);
-				}
-				else {
-					rsp.setContent("Raquete na testa");
-					rsp.setPerformative(ACLMessage.NOT_UNDERSTOOD);
-				}
-				send(rsp);                                                                 */
 			}
-			block();
-		}
+			
+				
+			}
 		}
 	
-	/*
-	 * 
-	 * ->Man1 [LigaB] Jogos
-	 * 
-	 */
-	private class sendMessage extends SimpleBehaviour{
-		
-		@Override
-		public int onEnd(){
-			
-			myAgent.doDelete();
-			return 0; 
+	
+	
+	private class sendMessage extends OneShotBehaviour{
+		LigaB liga;
+		public sendMessage(LigaB liga){
+			super();
+			this.liga= liga;
 		}
-		
 		@Override 
 		public void action(){
-			
 			AID receiver = new AID();
-			receiver.setLocalName("pingaponga");
-			
-			
+			receiver.setLocalName("Man1");
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
-			long time = System.currentTimeMillis();
-			msg.setConversationId(" " + time);
-			msg.addReceiver(receiver);
+			msg.setOntology("Jogos");
+			try {
+				msg.setContentObject(this.liga);
+				msg.addReceiver(receiver);
+				myAgent.send(msg);
+			} catch (Exception e) {
+				// Nao deu
 			
-
-				
-				msg.setContent("Ping");
-				
-		
-		
-			myAgent.send(msg);
+			}
+			
+		}
+	
 			
 		}
 		
-		@Override 
-		public boolean done(){
-			return true;
-		}
-	}
+		
+	
 }
