@@ -22,7 +22,7 @@ public class PJ  extends Agent{
 		public void action(){
 			
 			MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.REQUEST);
-			MessageTemplate mtJ = MessageTemplate.MatchOntology("Jogos");
+			MessageTemplate mtJ = MessageTemplate.MatchOntology("JOGOS");
 			MessageTemplate mtRespJogo = MessageTemplate.and(mt, mtJ);
 			ACLMessage msg = receive(mtRespJogo);
 			
@@ -57,7 +57,7 @@ public class PJ  extends Agent{
 			AID receiver = new AID();
 			receiver.setLocalName("Man1");
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
-			msg.setOntology("Jogos");
+			msg.setOntology("JOGOS");
 			try {
 				msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);

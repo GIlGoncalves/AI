@@ -39,7 +39,7 @@ private float [][]  res;
 		@Override
 		public void action(){
 			MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.REQUEST);
-			MessageTemplate mtC = MessageTemplate.MatchOntology("Critica");
+			MessageTemplate mtC = MessageTemplate.MatchOntology("CRITIC");
 			MessageTemplate mtRespCritico = MessageTemplate.and(mt, mtC);
 			ACLMessage msg = receive(mtRespCritico);
 			
@@ -297,7 +297,7 @@ private float [][]  res;
 			AID receiver = new AID();
 			receiver.setLocalName("Man1");
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
-			msg.setOntology("Critica");
+			msg.setOntology("CRITIC");
 			try {
 				msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);
