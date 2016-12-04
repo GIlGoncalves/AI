@@ -48,3 +48,13 @@
 /Man1$receiveMessageJogos.class
 /Man1$sendMessageLiga.class
 /PJ$ReceiveBehaviour$sendMessage.class
+/Critic$CriticBehaviour.class
+/Critic$sendMessageAE.class
+/Critic$sendMessageAJ.class
+/Critic$sendMessageAH.class
+/Critic$sendMessageACL.class
+/Critic$receiveMessageAE.class
+/Critic$receiveMessageAJ.class
+/Critic$receiveMessageAH.class
+/Critic$receiveMessageACL.class
+/Critic$sendMessageMan.class
