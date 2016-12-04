@@ -1,13 +1,23 @@
 package ai;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.HashSet;
+
 import jade.core.*;
 import jade.core.behaviours.CyclicBehaviour;
+import jade.core.behaviours.DataStore;
+import jade.core.behaviours.OneShotBehaviour;
+import jade.core.behaviours.SequentialBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
+import jade.lang.acl.MessageTemplate;
+import jade.lang.acl.UnreadableException;
 //Manager 1
 public class Man1  extends Agent{
-
+public HashSet<LigaB> apostas;
 	protected void setup(){
 		super.setup();
+		apostas = new HashSet<>();
 		this.addBehaviour(new ReceiveBehaviour());
 	}
 	
@@ -18,34 +28,98 @@ public class Man1  extends Agent{
 	 * ->Critic [LigaB] Avaliar - jogos da liga avaliados
 	 * 
 	 */
+	private Boolean CheckLiga (String nome){
+		Boolean ret = false;
+		for(LigaB a : this.apostas){
+			if(a.nome.equals(nome)) ret = true ;
+		}
+		//ver data
+		return ret;
+		
+	}
 	private class ReceiveBehaviour extends CyclicBehaviour {
 		
 		@Override
 		public void action(){
-			ACLMessage msg = receive();
-			if(msg != null){
-				/*
-				System.out.println("Ola mano " + msg.getSender() + "eu acho que " + msg.getContent());
-				ACLMessage rsp = msg.createReply();
-				
-				if(msg.getContent().equals("Ping")){
+			MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.REQUEST);
+			MessageTemplate mtI = MessageTemplate.MatchOntology("INFOLIGA");
+			MessageTemplate mtPedidoLiga = MessageTemplate.and(mt, mtI);
+			ACLMessage msg = receive(mtPedidoLiga);
+		
+			if(msg!=null){
+				String lig = msg.getContent();
+				if(!CheckLiga(lig)){
 					
-					rsp.setContent("Pong");
-					rsp.setPerformative(ACLMessage.INFORM);
-				}
-				else if(msg.getContent().equals("Pong")){
-					rsp.setContent("Ping");
-					rsp.setPerformative(ACLMessage.INFORM);
-				}
-				else {
-					rsp.setContent("Raquete na testa");
-					rsp.setPerformative(ACLMessage.NOT_UNDERSTOOD);
-				}
-				send(rsp);                                                                 */
+					LigaB newliga = new LigaB(lig);
+					SequentialBehaviour seq = new SequentialBehaviour();
+					
+					seq.addSubBehaviour(new sendMessageJogos(newliga));
+					seq.addSubBehaviour(new receiveMessageJogos());
+					myAgent.addBehaviour(seq);
+					
+				}//falta else
+				
 			}
-			block();
 		}
 		}
+	
+	private class receiveMessageJogos extends ReceiveBehaviour{
+		
+		@Override
+		public void action(){
+		
+		MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
+		MessageTemplate mtJ = MessageTemplate.MatchOntology("Jogos");
+		MessageTemplate mtRespJogo = MessageTemplate.and(mt, mtJ);
+		ACLMessage msg = receive(mtRespJogo);
+		
+		if(msg != null){
+			LigaB newliga;
+			try {
+				newliga = (LigaB) msg.getContentObject();
+				SequentialBehaviour seq = new SequentialBehaviour();
+				
+				seq.addSubBehaviour(new sendMessageCritico(newliga));
+				seq.addSubBehaviour(new receiveMessageCritico());
+				myAgent.addBehaviour(seq);
+			} catch (Exception e) {
+				// Nao deu
+			}
+			
+		}
+		
+		
+		}
+	}
+	
+	private class receiveMessageCritico extends ReceiveBehaviour{
+		
+		@Override
+		public void action(){
+		
+		MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
+		MessageTemplate mtC = MessageTemplate.MatchOntology("Critica");
+		MessageTemplate mtRespCritico = MessageTemplate.and(mt, mtC);
+		ACLMessage msg = receive(mtRespCritico);
+		
+		if(msg != null){
+			LigaB newliga;
+			try {
+				newliga = (LigaB) msg.getContentObject();
+				SequentialBehaviour seq = new SequentialBehaviour();
+				
+				seq.addSubBehaviour(new sendMessageLiga(newliga));
+	//add liga as listas
+				myAgent.addBehaviour(seq);
+			} catch (Exception e) {
+				// Nao deu
+			}
+			
+		}
+		
+		
+		}
+	}
 	/*
 	 * 
 	 * ->Sofwtare [LigaB] INFOLIGA - manda ao software as previsoes 
@@ -53,40 +127,87 @@ public class Man1  extends Agent{
 	 * ->Critic [LigaB] Avaliar - pede ao critico para prever
 	 * 
 	 */
-	private class sendMessage extends SimpleBehaviour{
-		
-		@Override
-		public int onEnd(){
-			
-			myAgent.doDelete();
-			return 0; 
+	
+	
+	private class sendMessageJogos extends OneShotBehaviour{
+		LigaB liga;
+		public sendMessageJogos(LigaB liga){
+			super();
+			this.liga= liga;
 		}
-		
 		@Override 
 		public void action(){
-			
 			AID receiver = new AID();
-			receiver.setLocalName("pingaponga");
+			receiver.setLocalName("PJ");
+			ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
+			msg.setOntology("Jogos");
+			try {
+				msg.setContentObject(this.liga);
+				msg.addReceiver(receiver);
+				myAgent.send(msg);
+			} catch (Exception e) {
+				// Nao deu
 			
-			
-			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
-			long time = System.currentTimeMillis();
-			msg.setConversationId(" " + time);
-			msg.addReceiver(receiver);
-			
-
-				
-				msg.setContent("Ping");
-				
-		
-		
-			myAgent.send(msg);
+			}
 			
 		}
 		
-		@Override 
-		public boolean done(){
-			return true;
-		}
+		
 	}
+	
+	private class sendMessageCritico extends OneShotBehaviour{
+		LigaB liga;
+		public sendMessageCritico(LigaB liga){
+			super();
+			this.liga= liga;
+		}
+		@Override 
+		public void action(){
+			AID receiver = new AID();
+			receiver.setLocalName("Man2");
+			ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
+			msg.setOntology("Critica");
+			try {
+				msg.setContentObject(this.liga);
+				msg.addReceiver(receiver);
+				myAgent.send(msg);
+			} catch (Exception e) {
+				// Nao deu
+			
+			}
+			
+		}
+		
+		
+	}
+	
+	private class sendMessageLiga extends OneShotBehaviour{
+		LigaB liga;
+		public sendMessageLiga(LigaB liga){
+			super();
+			this.liga= liga;
+		}
+		@Override 
+		public void action(){
+			AID receiver = new AID();
+			receiver.setLocalName("Software");
+			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
+			msg.setOntology("INFOLIGA");
+			try {
+				msg.setContentObject(this.liga);
+				msg.addReceiver(receiver);
+				myAgent.send(msg);
+			} catch (Exception e) {
+				// Nao deu
+			
+			}
+			
+		}
+		
+		
+	}
+	
+	
+	
+	
 }

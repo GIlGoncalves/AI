@@ -1,6 +1,8 @@
 package ai;
 
-public class Prediction {
+import java.io.Serializable;
+
+public class Prediction implements Serializable{
 Equipa A;
 Equipa B;
 float Resultado;

@@ -42,3 +42,9 @@
 /ACL$sendMessage.class
 /LigaB.class
 /Prediction.class
+/Man1$sendMessageCritico.class
+/Man1$sendMessageJogos.class
+/Man1$receiveMessageCritico.class
+/Man1$receiveMessageJogos.class
+/Man1$sendMessageLiga.class
+/PJ$ReceiveBehaviour$sendMessage.class
