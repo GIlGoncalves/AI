@@ -1,12 +1,48 @@
-<resultados>
-	<jogo>
-		<equipa_casa>SLB</equipa_casa>
-		<equipa_fora>FCP</equipa_fora>
-		<resultado>2-1</resultado>
+<?xml version="1.0"?>
+<resultados>	
+	<jogo>	
+		<equipa_casa>Rio Ave Rio Ave</equipa_casa>	
+		<resultado>1-3</resultado>
+		<equipa_fora>Oporto Oporto</equipa_fora>
 	</jogo>
-	<jogo>
-		<equipa_casa>SCP</equipa_casa>
-		<equipa_fora>VFC</equipa_fora>
-		<resultado>0-3</resultado>
+	<jogo>	
+		<equipa_casa>Moreirense Moreirense</equipa_casa>	
+		<resultado>1-1</resultado>
+		<equipa_fora>Pacos Ferreira Pacos Ferreira</equipa_fora>
+	</jogo>
+	<jogo>	
+		<equipa_casa>Sp. Portugal Sp. Portugal</equipa_casa>	
+		<resultado>2-0</resultado>
+		<equipa_fora>Maritimo Maritimo</equipa_fora>
+	</jogo>
+	<jogo>	
+		<equipa_casa>Tondela Tondela</equipa_casa>	
+		<resultado>0-2</resultado>
+		<equipa_fora>Benfica Benfica</equipa_fora>
+	</jogo>
+	<jogo>	
+		<equipa_casa>Boavista Boavista</equipa_casa>	
+		<resultado>2-0</resultado>
+		<equipa_fora>Arouca Arouca</equipa_fora>
+	</jogo>
+	<jogo>	
+		<equipa_casa>V. Setubal V. Setubal</equipa_casa>	
+		<resultado>2-0</resultado>
+		<equipa_fora>Os Belenenses Os Belenenses</equipa_fora>
+	</jogo>
+	<jogo>	
+		<equipa_casa>Guimaraes Guimaraes</equipa_casa>	
+		<resultado>0-1</resultado>
+		<equipa_fora>Braga Braga</equipa_fora>
+	</jogo>
+	<jogo>	
+		<equipa_casa>Estoril Estoril</equipa_casa>	
+		<resultado>0-2</resultado>
+		<equipa_fora>Feirense Feirense</equipa_fora>
+	</jogo>
+	<jogo>	
+		<equipa_casa>Nac. Madeira Nac. Madeira</equipa_casa>	
+		<resultado>0-1</resultado>
+		<equipa_fora>GD Chaves GD Chaves</equipa_fora>
 	</jogo>
 </resultados>
