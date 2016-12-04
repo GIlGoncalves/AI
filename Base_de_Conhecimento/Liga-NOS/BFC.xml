@@ -1,202 +1,202 @@
+<?xml version="1.0"?>
 <equipa>
 	<nome_completo>Boavista Futebol Clube</nome_completo>
 	<jogadores>
 		<jogador>
-			<nome>AǦAYEV, Kamran</nome>	
+			<nome>AGAYEV Kamran</nome>	
 			<posicao>GR</posicao>
 			<idade>29</idade>
 			<valor>80</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>MEIRA, Mickaël</nome>	
+			<nome>MEIRA Mickael</nome>	
 			<posicao>GR</posicao>
 			<idade>22</idade>
 			<valor>77</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>BÂ, Mamadou</nome>	
+			<nome>BA Mamadou</nome>	
 			<posicao>GR</posicao>
 			<idade>31</idade>
 			<valor>77</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>SANTOS, Carlos</nome>	
+			<nome>SANTOS Carlos</nome>	
 			<posicao>DEF</posicao>
 			<idade>27</idade>
 			<valor>80</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>CORREIA, Anderson</nome>	
+			<nome>CORREIA Anderson</nome>	
 			<posicao>DEF</posicao>
 			<idade>25</idade>
 			<valor>78</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>TALOCHA, Joâo</nome>	
+			<nome>TALOCHA Joao</nome>	
 			<posicao>DEF</posicao>
 			<idade>27</idade>
 			<valor>76</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>HENRIQUE, Nuno</nome>	
+			<nome>HENRIQUE Nuno</nome>	
 			<posicao>DEF</posicao>
 			<idade>30</idade>
 			<valor>82</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>SAMPAIO, Philipe</nome>	
+			<nome>SAMPAIO Philipe</nome>	
 			<posicao>DEF</posicao>
 			<idade>22</idade>
 			<valor>82</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>TENGARRINHA, Bernardo</nome>	
+			<nome>TENGARRINHA Bernardo</nome>	
 			<posicao>DEF</posicao>
 			<idade>27</idade>
 			<valor>82</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>TAGLIAPETRA, Lucas</nome>	
+			<nome>TAGLIAPETRA Lucas</nome>	
 			<posicao>DEF</posicao>
 			<idade>26</idade>
 			<valor>78</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>PIMENTA, Luís</nome>	
+			<nome>PIMENTA Luis</nome>	
 			<posicao>DEF</posicao>
 			<idade>20</idade>
 			<valor>73</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>MESQUITA, Tiago</nome>	
+			<nome>MESQUITA Tiago</nome>	
 			<posicao>DEF</posicao>
 			<idade>26</idade>
 			<valor>82</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>MACHADO, Edu</nome>	
+			<nome>MACHADO Edu</nome>	
 			<posicao>DEF</posicao>
 			<idade>26</idade>
 			<valor>80</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>MANDIANG, Idriss</nome>	
-			<posicao>MED<
+			<nome>MANDIANG Idriss</nome>	
+			<posicao>MED</posicao>
 			<idade>31</idade>
 			<valor>82</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>CARRAÇA, Moura</nome>	
-			<posicao>MED<
+			<nome>CARRACA Moura</nome>	
+			<posicao>MED</posicao>
 			<idade>23</idade>
 			<valor>80</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>DAF, Mohamed</nome>	
-			<posicao>MED<
+			<nome>DAF Mohamed</nome>	
+			<posicao>MED</posicao>
 			<idade>22</idade>
 			<valor>78</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>SAMÚ, Silva</nome>	
-			<posicao>MED<
+			<nome>SAMU Silva</nome>	
+			<posicao>MED</posicao>
 			<idade>20</idade>
 			<valor>75</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>ESPINHO, Fábio</nome>	
-			<posicao>MED<
+			<nome>ESPINHO F&#xE1;bio</nome>	
+			<posicao>MED</posicao>
 			<idade>31</idade>
 			<valor>83</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>CARVALHO, Anderson</nome>	
-			<posicao>MED<
+			<nome>CARVALHO Anderson</nome>	
+			<posicao>MED</posicao>
 			<idade>26</idade>
 			<valor>82</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>MAKHMUDOV, Emin</nome>	
-			<posicao>MED<
+			<nome>MAKHMUDOV Emin</nome>	
+			<posicao>MED</posicao>
 			<idade>24</idade>
 			<valor>80</valor>
 			<status>1</status>
-		</jogado>	
+		</jogador>	
 		<jogador>
-			<nome>MEDEIROS, Iuri</nome>	
-			<posicao>MED<
+			<nome>MEDEIROS Iuri</nome>	
+			<posicao>MED</posicao>
 			<idade>22</idade>
 			<valor>85</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>SCHEMBRI, André</nome>	
-			<posicao>MED<
+			<nome>SCHEMBRI Andre</nome>	
+			<posicao>MED</posicao>
 			<idade>30</idade>
 			<valor>83</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>SANTOS, Renato</nome>	
-			<posicao>MED<
+			<nome>SANTOS Renato</nome>	
+			<posicao>MED</posicao>
 			<idade>25</idade>
 			<valor>80</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>BUKIA, Andre</nome>	
-			<posicao>MED<
+			<nome>BUKIA Andre</nome>	
+			<posicao>MED</posicao>
 			<idade>21</idade>
 			<valor>75</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>ERIVELTO, Silva</nome>	
-			<posicao>MED<
+			<nome>ERIVELTO Silva</nome>	
+			<posicao>MED</posicao>
 			<idade>28</idade>
 			<valor>77</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>MEDIĆ, Lovro</nome>	
+			<nome>MEDI&#x106; Lovro</nome>	
 			<posicao>AVA</posicao>
 			<idade>26</idade>
 			<valor>80</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>DIGAS, Marques</nome>	
+			<nome>DIGAS Marques</nome>	
 			<posicao>AVA</posicao>
 			<idade>23</idade>
 			<valor>76</valor>
 			<status>1</status>
-		</jogado>
+		</jogador>
 		<jogador>
-			<nome>IDELINO, Colubali</nome>	
+			<nome>IDELINO Colubali</nome>	
 			<posicao>AVA</posicao>
 			<idade>22</idade>
 			<valor>75</valor>
 			<status>1</status>
-		</jogado>
-
+		</jogador>
 	</jogadores>
 </equipa>
