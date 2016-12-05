@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<jogos>
+		<jogo>
+		<equipa_casa>Maritimo Maritimo</equipa_casa>
+		<data>02/12/2016</data>
+		<equipa_fora>Benfica Benfica</equipa_fora>
+		<odd_casa>1.00</odd_casa>
+		<odd_empate>1.00</odd_empate>
+		<odd_fora>1.00</odd_fora>
+	</jogo>
+	<jogo>
+		<equipa_casa>Rio Ave Rio Ave</equipa_casa>
+		<data>03/12/2016</data>
+		<equipa_fora>Tondela Tondela</equipa_fora>
+		<odd_casa>1.00</odd_casa>
+		<odd_empate>1.00</odd_empate>
+		<odd_fora>1.00</odd_fora>
+	</jogo>
+	<jogo>
+		<equipa_casa>Sp. Portugal Sp. Portugal</equipa_casa>
+		<data>03/12/2016</data>
+		<equipa_fora>V. Setubal V. Setubal</equipa_fora>
+		<odd_casa>1.00</odd_casa>
+		<odd_empate>1.00</odd_empate>
+		<odd_fora>1.00</odd_fora>
+	</jogo>
+	<jogo>
+		<equipa_casa>Oporto Oporto</equipa_casa>
+		<data>03/12/2016</data>
+		<equipa_fora>Braga Braga</equipa_fora>
+		<odd_casa>1.00</odd_casa>
+		<odd_empate>1.00</odd_empate>
+		<odd_fora>1.00</odd_fora>
+	</jogo>
+	<jogo>
+		<equipa_casa>Feirense Feirense</equipa_casa>
+		<data>04/12/2016</data>
+		<equipa_fora>Arouca Arouca</equipa_fora>
+		<odd_casa>1.00</odd_casa>
+		<odd_empate>1.00</odd_empate>
+		<odd_fora>1.00</odd_fora>
+	</jogo>
+	<jogo>
+		<equipa_casa>Moreirense Moreirense</equipa_casa>
+		<data>04/12/2016</data>
+		<equipa_fora>Nac. Madeira Nac. Madeira</equipa_fora>
+		<odd_casa>1.00</odd_casa>
+		<odd_empate>1.00</odd_empate>
+		<odd_fora>1.00</odd_fora>
+	</jogo>
+	<jogo>
+		<equipa_casa>Estoril Estoril</equipa_casa>
+		<data>04/12/2016</data>
+		<equipa_fora>Os Belenenses Os Belenenses</equipa_fora>
+		<odd_casa>1.00</odd_casa>
+		<odd_empate>1.00</odd_empate>
+		<odd_fora>1.00</odd_fora>
+	</jogo>
+	<jogo>
+		<equipa_casa>Guimaraes Guimaraes</equipa_casa>
+		<data>04/12/2016</data>
+		<equipa_fora>GD Chaves GD Chaves</equipa_fora>
+		<odd_casa>1.00</odd_casa>
+		<odd_empate>1.00</odd_empate>
+		<odd_fora>1.00</odd_fora>
+	</jogo>
+	<jogo>
+		<equipa_casa>Pacos Ferreira Pacos Ferreira</equipa_casa>
+		<data>05/12/2016</data>
+		<equipa_fora>Boavista Boavista</equipa_fora>
+		<odd_casa>1.00</odd_casa>
+		<odd_empate>1.00</odd_empate>
+		<odd_fora>1.00</odd_fora>
+	</jogo>
+</jogos>
