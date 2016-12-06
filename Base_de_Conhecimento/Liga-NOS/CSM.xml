@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<equipa>
+	<nome_completo>Clube Sport Maritimo</nome_completo>
+	<jogadores>
+		<jogador>
+			<nome>GOTTARDI Eduardo</nome>
+			<posicao>GR</posicao>
+			<idade>31</idade>
+			<valor>84</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>VIEIRA Patrick</nome>
+			<posicao>DEF</posicao>
+			<idade>25</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>CHINA Fabio</nome>
+			<posicao>DEF</posicao>
+			<idade>24</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SANTOS Samuel</nome>
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>ANTONIO Mauricio</nome>
+			<posicao>DEF</posicao>
+			<idade>24</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>DIRCEU Filho</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>DEYVISON Bessas</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>CORONAS Pedro</nome>
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>FRANSERGIO Barbosa</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>84</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SEN Erdem</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>PLESSIS Damien</nome>
+			<posicao>MED</posicao>
+			<idade>28</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SILVA Regis</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>CLEBER Jean</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>GHAZARYAN Gevorg</nome>
+			<posicao>MED</posicao>
+			<idade>28</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SOARES Alex</nome>
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>BESSA Eber</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>ESQUERDINHA Duarte</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>MANSOUR Shaher</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>73</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>COSTA Edgar</nome>
+			<posicao>MED</posicao>
+			<idade>29</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>XAVIER Ant&#xF3;nio</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>NEPOMUCENO Gevaro</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>DJOUSSE Donald</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>79</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>BRITO Furtado</nome>
+			<posicao>MED</posicao>
+			<idade>29</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>BALDE Amido</nome>
+			<posicao>AVA</posicao>
+			<idade>25</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>BABA Diawara</nome>
+			<posicao>AVA</posicao>
+			<idade>28</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SOUSA Dyego</nome>
+			<posicao>AVA</posicao>
+			<idade>27</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>

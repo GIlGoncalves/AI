@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<equipa>
+	<nome_completo>Grupo Desportivo Estoril</nome_completo>
+	<jogadores>
+		<jogador>
+			<nome>MOREIRA Jose</nome>
+			<posicao>GR</posicao>
+			<idade>34</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>RIBEIRO Luis</nome>
+			<posicao>GR</posicao>
+			<idade>24</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>GRA&#xC7;A Thierry</nome>
+			<posicao>GR</posicao>
+			<idade>21</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>MANO Luis</nome>
+			<posicao>DEF</posicao>
+			<idade>29</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>FERREIRA Joel</nome>
+			<posicao>DEF</posicao>
+			<idade>24</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>AILTON Ferreira</nome>
+			<posicao>DEF</posicao>
+			<idade>21</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>CARDOSO Thiago</nome>
+			<posicao>DEF</posicao>
+			<idade>25</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>AFONSO Joao</nome>
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>84</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>DANKLER Pedreira</nome>
+			<posicao>DEF</posicao>
+			<idade>24</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>DIAKHITE Oumar</nome>
+			<posicao>DEF</posicao>
+			<idade>22</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>BASSO Joao</nome>
+			<posicao>DEF</posicao>
+			<idade>19</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>FARIAS Lucas</nome>
+			<posicao>DEF</posicao>
+			<idade>22</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>AMADO Diogo</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>TAIRA Afonso</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>YARCHUK Dmytro</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>SEBAIHI Billal</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>EDUARDO Teixeira</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>BALTAZAR Diogo</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>ANDIO Matheus</nome>
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>HENRIQUE Paulo</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>FARIAS Alisson</nome>
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>AUGUSTO Felipe</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>MATHEUZINHO Bossa</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>TOCANTINS Gustavo</nome>
+			<posicao>AVA</posicao>
+			<idade>20</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>LIMA Joao</nome>
+			<posicao>AVA</posicao>
+			<idade>18</idade>
+			<valor>70</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>KLEBER Pinheiro</nome>
+			<posicao>AVA</posicao>
+			<idade>26</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>PHELLYPE Luiz</nome>
+			<posicao>AVA</posicao>
+			<idade>23</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>BAZELYUK Konstantin</nome>
+			<posicao>AVA</posicao>
+			<idade>23</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>GOMES Bruno</nome>
+			<posicao>AVA</posicao>
+			<idade>20</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>

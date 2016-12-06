@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<equipa>
+	<nome_completo>Boavista Futebol Clube</nome_completo>
+	<jogadores>
+		<jogador>
+			<nome>AGAYEV Kamran</nome>	
+			<posicao>GR</posicao>
+			<idade>29</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>MEIRA Mickael</nome>	
+			<posicao>GR</posicao>
+			<idade>22</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>BA Mamadou</nome>	
+			<posicao>GR</posicao>
+			<idade>31</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SANTOS Carlos</nome>	
+			<posicao>DEF</posicao>
+			<idade>27</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>CORREIA Anderson</nome>	
+			<posicao>DEF</posicao>
+			<idade>25</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>TALOCHA Joao</nome>	
+			<posicao>DEF</posicao>
+			<idade>27</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>HENRIQUE Nuno</nome>	
+			<posicao>DEF</posicao>
+			<idade>30</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SAMPAIO Philipe</nome>	
+			<posicao>DEF</posicao>
+			<idade>22</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>TENGARRINHA Bernardo</nome>	
+			<posicao>DEF</posicao>
+			<idade>27</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>TAGLIAPETRA Lucas</nome>	
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>PIMENTA Luis</nome>	
+			<posicao>DEF</posicao>
+			<idade>20</idade>
+			<valor>73</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>MESQUITA Tiago</nome>	
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>MACHADO Edu</nome>	
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>MANDIANG Idriss</nome>	
+			<posicao>MED</posicao>
+			<idade>31</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>CARRACA Moura</nome>	
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>DAF Mohamed</nome>	
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SAMU Silva</nome>	
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>ESPINHO F&#xE1;bio</nome>	
+			<posicao>MED</posicao>
+			<idade>31</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>CARVALHO Anderson</nome>	
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>MAKHMUDOV Emin</nome>	
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>MEDEIROS Iuri</nome>	
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SCHEMBRI Andre</nome>	
+			<posicao>MED</posicao>
+			<idade>30</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SANTOS Renato</nome>	
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>BUKIA Andre</nome>	
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>ERIVELTO Silva</nome>	
+			<posicao>MED</posicao>
+			<idade>28</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>MEDI&#x106; Lovro</nome>	
+			<posicao>AVA</posicao>
+			<idade>26</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>DIGAS Marques</nome>	
+			<posicao>AVA</posicao>
+			<idade>23</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>IDELINO Colubali</nome>	
+			<posicao>AVA</posicao>
+			<idade>22</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>

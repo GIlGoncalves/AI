@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<equipa>
+	<nome_completo>Grupo Desportivo de Chaves</nome_completo>
+	<jogadores>
+		<jogador>
+			<nome>NUNES Ricardo</nome>
+			<posicao>GR</posicao>
+			<idade>34</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>FILIPE Antonio</nome>
+			<posicao>GR</posicao>
+			<idade>31</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>NOVO Emanuel</nome>
+			<posicao>GR</posicao>
+			<idade>24</idade>
+			<valor>70</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>PETROVIC Nemanja</nome>
+			<posicao>DEF</posicao>
+			<idade>24</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>LENHO Nelson</nome>
+			<posicao>DEF</posicao>
+			<idade>32</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>LOPES Felipe</nome>
+			<posicao>DEF</posicao>
+			<idade>29</idade>
+			<valor>84</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>ALBERTO Luis</nome>
+			<posicao>DEF</posicao>
+			<idade>33</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>FREIRE Leandro</nome>
+			<posicao>DEF</posicao>
+			<idade>27</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>SANTOS Fabio</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>MATHAUS Felix</nome>
+			<posicao>DEF</posicao>
+			<idade>21</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>PAULINHO Mota</nome>
+			<posicao>DEF</posicao>
+			<idade>25</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>QUEIROS Pedro</nome>
+			<posicao>DEF</posicao>
+			<idade>32</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>BATTAGLIA Rodrigo</nome>
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>ASSIS Rafael</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>RAMOS Francisco</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>PATRAO Joao</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>PONCK Carlos</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>VUKE Simon</nome>
+			<posicao>MED</posicao>
+			<idade>30</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>BRAGA Bruno</nome>
+			<posicao>MED</posicao>
+			<idade>33</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>MARTINS Fabio</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>MARIO Joao</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>PERDIGAO Macedo</nome>
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>ELHOUNI Hamdou</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>SOUZA Gustavo</nome>
+			<posicao>MED</posicao>
+			<idade>32</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>LOPES Rafael</nome>
+			<posicao>AVA</posicao>
+			<idade>25</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>OLIVEIRA Willian</nome>
+			<posicao>AVA</posicao>
+			<idade>24</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>
+			<nome>FALL Alioune</nome>
+			<posicao>AVA</posicao>
+			<idade>21</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>
