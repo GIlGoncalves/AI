@@ -16,8 +16,10 @@ import jade.lang.acl.UnreadableException;
 //Manager 
 public class Man1  extends Agent{
 public HashSet<LigaB> apostas;
+public int counter;
 	protected void setup(){
 		super.setup();
+		counter = 0;
 		apostas = new HashSet<>();
 		this.addBehaviour(new ReceiveBehaviour());
 	}
@@ -55,14 +57,17 @@ public HashSet<LigaB> apostas;
 					LigaB newliga = new LigaB(lig);
 					SequentialBehaviour seq = new SequentialBehaviour();
 					
-					seq.addSubBehaviour(new sendMessageJogos(newliga));
+					seq.addSubBehaviour(new sendMessageJogos(newliga,counter));
 					seq.addSubBehaviour(new receiveMessageJogos());
 					myAgent.addBehaviour(seq);
-					
-				}//falta else
+					counter++;
+				}//falta else se existir vai buscar liga ao apostas e faz sendMessageLiga
+				
 				
 			}
+			block();
 		}
+		
 		}
 	
 	
@@ -87,7 +92,7 @@ public HashSet<LigaB> apostas;
 				newliga = (LigaB) msg.getContentObject();
 				SequentialBehaviour seq = new SequentialBehaviour();
 				
-				seq.addSubBehaviour(new sendMessageCritico(newliga));
+				seq.addSubBehaviour(new sendMessageCritico(newliga,counter-1));
 				seq.addSubBehaviour(new receiveMessageCritico());
 				myAgent.addBehaviour(seq);
 			} catch (Exception e) {
@@ -142,9 +147,11 @@ public HashSet<LigaB> apostas;
 	
 	private class sendMessageJogos extends OneShotBehaviour{
 		LigaB liga;
-		public sendMessageJogos(LigaB liga){
+		String idx;
+		public sendMessageJogos(LigaB liga,int id ){
 			super();
 			this.liga= liga;
+			idx = String.valueOf(id);
 		}
 		@Override 
 		public void action(){
@@ -155,6 +162,7 @@ public HashSet<LigaB> apostas;
 			try {
 				msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);
+				msg.setConversationId(idx);
 				myAgent.send(msg);
 			} catch (Exception e) {
 				// Nao deu
@@ -168,9 +176,11 @@ public HashSet<LigaB> apostas;
 	
 	private class sendMessageCritico extends OneShotBehaviour{
 		LigaB liga;
-		public sendMessageCritico(LigaB liga){
+		String idx;
+		public sendMessageCritico(LigaB liga,int id){
 			super();
 			this.liga= liga;
+			idx = String.valueOf(id);
 		}
 		@Override 
 		public void action(){

@@ -47,7 +47,7 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 		@Override 
 		public void action(){
 			AID receiver = new AID();
-			receiver.setLocalName("Critico");
+			receiver.setLocalName("Critic");
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("HISTORICO");
 			msg.setConversationId(id);

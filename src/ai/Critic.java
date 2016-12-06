@@ -58,6 +58,7 @@ private float [][]  res;
 					seq.addSubBehaviour(par);
 					seq.addSubBehaviour(new sendMessageMan());
 					myAgent.addBehaviour(seq);
+					ligacritic = newliga;
 				} catch (Exception e) {
 					// Nao deu
 				}

@@ -15,14 +15,11 @@ import java.util.Objects;
  */
 public class Jogador {
     
-    public static final String GUARDA_REDES ="guarda-redes";
-    public static final String MEIO_CAMPO ="meio campo";
-    public static final String DEFESA ="defesa";
-    public static final String ATACANTE ="guarda-redes";
-    
+   
     
     private String nome;
     private String posicao;
+    private int idade;
     private int skill;
     private boolean status;
 
@@ -30,6 +27,7 @@ public class Jogador {
     
         this.nome = "";
         this.posicao = "";
+        this.idade=-1;
         this.skill = 0;
         this.status = true;
     }
@@ -41,13 +39,15 @@ public class Jogador {
         this.posicao=m.getPosicao();
         this.skill=m.getSkill();
         this.status=m.getStatus();
+        this.idade=m.getIdade();
     }
     
-    public Jogador(String nome, String posicao, int skill, boolean status) {
+    public Jogador(String nome, String posicao,int idade,int skill, boolean status) {
         this.nome = nome;
         this.posicao = posicao;
         this.skill = skill;
         this.status = status;
+        this.idade=idade;
     }
 
     @Override
@@ -56,9 +56,13 @@ public class Jogador {
                 "nome : " + nome + 
                 "\n posicao : " + posicao + 
                 "\n skill : " + skill + 
-                "\n status : " + status ;
+                "\n status : " + status 
+                +"\n idade : " +idade;
     }
 
+   
+    
+    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -83,6 +87,10 @@ public class Jogador {
         if (!Objects.equals(this.posicao, other.posicao)) {
             return false;
         }
+        if (this.idade != other.idade) {
+            return false;
+        }
+        
         return true;
     }
 
@@ -125,6 +133,14 @@ public class Jogador {
     public Jogador clone() {
     
     return new Jogador(this);
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
     
     
