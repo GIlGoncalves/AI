@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<equipa>
+	<nome_completo>Clube Desportivo Feirense</nome_completo>
+	<jogadores>
+		<jogador>		
+			<nome>PECANHA Peterson</nome>
+			<posicao>GR</posicao>
+			<idade>36</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>VANA Alves</nome>
+			<posicao>GR</posicao>
+			<idade>25</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>ALAMPASU Dele</nome>
+			<posicao>GR</posicao>
+			<idade>19</idade>
+			<valor>70</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>KAKUBA Alex</nome>
+			<posicao>DEF</posicao>
+			<idade>25</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>BRUNO Vitor</nome>
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>ICARO Silva</nome>
+			<posicao>DEF</posicao>
+			<idade>27</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>ROCHA Luis</nome>
+			<posicao>DEF</posicao>
+			<idade>30</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>MONTEIRO Paulo</nome>
+			<posicao>DEF</posicao>
+			<idade>31</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>FLAVIO Ramos</nome>
+			<posicao>DEF</posicao>
+			<idade>22</idade>
+			<valor>74</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>ALCENAT Jean Sony</nome>
+			<posicao>DEF</posicao>
+			<idade>30</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>AURELIO Luis</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>BARGE Sergio</nome>
+			<posicao>DEF</posicao>
+			<idade>32</idade>
+			<valor>79</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>FREIRE Micael</nome>
+			<posicao>DEF</posicao>
+			<idade>22</idade>
+			<valor>75</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>SEMEDO Sergio</nome>
+			<posicao>MED</posicao>
+			<idade>28</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>DIAS Ricardo</nome>
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>CRIS Santos</nome>
+			<posicao>MED</posicao>
+			<idade>32</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>TCHAMI Herve</nome>
+			<posicao>MED</posicao>
+			<idade>28</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>SILVA Tiago</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>FABINHO Carvalho</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>OLIVEIRA Ruben</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>ETEBO Oghenekaro</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>JOGO Tiago</nome>
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>TAVARES Joao</nome>
+			<posicao>MED</posicao>
+			<idade>17</idade>
+			<valor>70</valor>
+			<status>1</status>
+		</jogador>	
+		<jogador>
+			<nome>KARAMANOS Tasos</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>MACHADO Luis</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>VIEIRINHA Filipe</nome>
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>73</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>PLATINY Higor</nome>
+			<posicao>AVA</posicao>
+			<idade>26</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>GUIMA Azevedo</nome>
+			<posicao>AVA</posicao>
+			<idade>30</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>
+			<nome>DAVID Iduitua</nome>
+			<posicao>AVA</posicao>
+			<idade>19</idade>
+			<valor>70</valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>

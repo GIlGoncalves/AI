@@ -50,7 +50,15 @@ public class AE  extends Agent{
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("ESTADO");
 			msg.setConversationId(id);
+			
+			
 			// meter o conteudo como sendo o calculo 	msg.setContent("");
+			
+			float res = 1;
+			msg.setContent(String.valueOf(res));
+			
+			
+			//
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
 			
