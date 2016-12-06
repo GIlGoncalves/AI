@@ -48,9 +48,11 @@ public class PJ  extends Agent{
 	
 	private class sendMessage extends OneShotBehaviour{
 		LigaB liga;
+		
 		public sendMessage(LigaB liga){
 			super();
 			this.liga= liga;
+		
 		}
 		@Override 
 		public void action(){
@@ -58,10 +60,11 @@ public class PJ  extends Agent{
 			receiver.setLocalName("Man1");
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("JOGOS");
+			Leitura l = new Leitura();
 			try {
 				
 				//Inserir na liga  as  predictions com as Equipas a e B ,  o int diz se a equipa a joga em casa ou ao e o resultado a 0
-				
+				l.JporAcontecer(this.liga);
 				msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);
 				myAgent.send(msg);

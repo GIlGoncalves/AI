@@ -17,7 +17,7 @@ private float of;
 private GregorianCalendar data;//nao ta bom
 
 
-public Prediction(String siglaA, String siglaB, float resultado, int casa, float oc, float oe, float of) {
+public Prediction(String siglaA, String siglaB, float resultado, int casa, float oc, float oe, float of,GregorianCalendar g) {
 	
 	this.siglaA = siglaA;
 	this.siglaB = siglaB;
@@ -26,7 +26,7 @@ public Prediction(String siglaA, String siglaB, float resultado, int casa, float
 	this.oc = oc;
 	this.oe = oe;
 	this.of = of;
-	data =  new GregorianCalendar();
+	data =  g;
 }
 public String getSiglaA() {
 	return siglaA;
