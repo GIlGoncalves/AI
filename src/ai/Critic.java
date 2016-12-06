@@ -47,12 +47,12 @@ private float [][]  res;
 				LigaB newliga;
 				try {
 					newliga = (LigaB) msg.getContentObject();
-					res = new float [newliga.Jogos.size()][4] ;
+					res = new float [newliga.getNJogos()][4] ;
 					int i = 0;
 					SequentialBehaviour seq = new SequentialBehaviour();
 					 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
-					for(Prediction a : newliga.Jogos){
-						par.addSubBehaviour(new CriticBehaviour(i,a.siglaA,a.siglaB,a.Casa) );
+					for(Prediction a : newliga.getPred()){
+						par.addSubBehaviour(new CriticBehaviour(i,a.getSiglaA(),a.getSiglaB(),a.getCasa()) );
 						i++;
 					}
 					seq.addSubBehaviour(par);
@@ -294,6 +294,7 @@ private float [][]  res;
 		public void action(){
 			
 			//FAZ CRITICAS  COM O RES E DEPOIS MANDA
+			
 			AID receiver = new AID();
 			receiver.setLocalName("Man1");
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);

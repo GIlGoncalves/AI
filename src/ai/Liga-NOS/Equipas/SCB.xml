@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<equipa>
+	<nome_completo>Sporting Clube de Braga</nome_completo>
+	<jogadores>		
+		<jogador>	
+			<nome>MARAFONA Jose</nome>
+			<posicao>GR</posicao>
+			<idade>29</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>MAGALHAES Matheus</nome>
+			<posicao>GR</posicao>
+			<idade>24</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>SA Tiago</nome>
+			<posicao>GR</posicao>
+			<idade>21</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>BAIANO Wanderson</nome>
+			<posicao>DEF</posicao>
+			<idade>29</idade>
+			<valor>86</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>GOIANO Marcelo</nome>
+			<posicao>DEF</posicao>
+			<idade>29</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>RINGSTAD Stian</nome>
+			<posicao>DEF</posicao>
+			<idade>25</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>DJAVAN Ferreira</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>PINTO Andre</nome>
+			<posicao>DEF</posicao>
+			<idade>27</idade>
+			<valor>86</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>VELAZQUEZ Emiliano</nome>
+			<posicao>DEF</posicao>
+			<idade>22</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>FERREIRA Ricardo</nome>
+			<posicao>DEF</posicao>
+			<idade>24</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>ROSIC Lazar</nome>
+			<posicao>DEF</posicao>
+			<idade>23</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>VUKCEVIC Nikola</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>AGUIAR Luis</nome>
+			<posicao>MED</posicao>
+			<idade>31</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>MAURO Sousa</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>BAKIC Marko</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>TIBA Pedro</nome>
+			<posicao>MED</posicao>
+			<idade>28</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>OSUCHUKWU Chidi</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>OTI Emmanuel</nome>
+			<posicao>MED</posicao>
+			<idade>20</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>EDUARDO Wilson</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>FONTE Rui</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>HORTA Ricardo</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>SANTOS Pedro</nome>
+			<posicao>MED</posicao>
+			<idade>28</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>BENITEZ Oscar</nome>
+			<posicao>MED</posicao>
+			<idade>23</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>ALAN Osorio</nome>
+			<posicao>MED</posicao>
+			<idade>37</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>COUTINHO Douglas</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>MARTINEZ Tomas</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>CONTRERAS Rodrigo</nome>
+			<posicao>MED</posicao>
+			<idade>21</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>STOJILJKOVIC Nikola</nome>
+			<posicao>AVA</posicao>
+			<idade>24</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>KOKA Ahmed Hassan</nome>
+			<posicao>AVA</posicao>
+			<idade>23</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador> 
+		<jogador>	
+			<nome>PINHO Rodrigo</nome>
+			<posicao>AVA</posicao>
+			<idade>25</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>

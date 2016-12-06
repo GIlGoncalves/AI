@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<equipa>
+	<nome_completo>Clube de Futebol Os Belenenses</nome_completo>
+	<jogadores>		
+		<jogador>	
+			<nome>VENTURA Hugo</nome>
+			<posicao>GR</posicao>
+			<idade>28</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>JONES Matt</nome>
+			<posicao>GR</posicao>
+			<idade>30</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>MENDES Filipe</nome>
+			<posicao>GR</posicao>
+			<idade>31</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>VELOSO Rafael</nome>
+			<posicao>GR</posicao>
+			<idade>23</idade>
+			<valor>77</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>CASTRO PEREIRA Joel</nome>
+			<posicao>GR</posicao>
+			<idade>20</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>BRANDAO Goncalo</nome>
+			<posicao>DEF</posicao>
+			<idade>30</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>HANIN Florent</nome>
+			<posicao>DEF</posicao>
+			<idade>26</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>PINTO Mica</nome>
+			<posicao>DEF</posicao>
+			<idade>23</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>PALHINHA JoAo</nome>
+			<posicao>DEF</posicao>
+			<idade>21</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>DUARTE Domingos</nome>
+			<posicao>DEF</posicao>
+			<idade>21</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>PALMEIRA Mario</nome>
+			<posicao>DEF</posicao>
+			<idade>27</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>SILVA Goncalo</nome>
+			<posicao>DEF</posicao>
+			<idade>25</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>ALMEIDA Dinis</nome>
+			<posicao>DEF</posicao>
+			<idade>21</idade>
+			<valor>76</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>DIOGO JoAo</nome>
+			<posicao>DEF</posicao>
+			<idade>28</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>TAVARES Goncalo</nome>
+			<posicao>DEF</posicao>
+			<idade>19</idade>
+			<valor>70</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>ROSELL Oriol</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>YEBDA Hassan</nome>
+			<posicao>MED</posicao>
+			<idade>32</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>GOMES Vitor</nome>
+			<posicao>MED</posicao>
+			<idade>28</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>SILVA Luis</nome>
+			<posicao>MED</posicao>
+			<idade>24</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>ROSA Miguel</nome>
+			<posicao>MED</posicao>
+			<idade>27</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>SOUSA Andre</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>82</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>DIAS Bernardo</nome>
+			<posicao>MED</posicao>
+			<idade>19</idade>
+			<valor>70</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>STURGEON Fabio</nome>
+			<posicao>MED</posicao>
+			<idade>22</idade>
+			<valor>85</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>FERNANDES Gerso</nome>
+			<posicao>MED</posicao>
+			<idade>25</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>CAMARa Abel</nome>
+			<posicao>MED</posicao>
+			<idade>26</idade>
+			<valor>83</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>BETINHO Alves</nome>
+			<posicao>AVA</posicao>
+			<idade>23</idade>
+			<valor>80</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>ANDRIC Komnen</nome>
+			<posicao>AVA</posicao>
+			<idade>21</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+		<jogador>	
+			<nome>CAEIRO Tiago</nome>
+			<posicao>AVA</posicao>
+			<idade>32</idade>
+			<valor>78</valor>
+			<status>1</status>
+		</jogador>
+	</jogadores>
+</equipa>

@@ -27,8 +27,9 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 			
 			if(msg != null){
 				SequentialBehaviour seq = new SequentialBehaviour();
-				
-				seq.addSubBehaviour(new sendMessageC(msg.getConversationId()));
+				String equipas = msg.getContent();
+				//SLB:FCP
+				seq.addSubBehaviour(new sendMessageC(msg.getConversationId(),equipas));
 				myAgent.addBehaviour(seq);
 				
 			}
@@ -41,8 +42,11 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 	
 	private class sendMessageC extends OneShotBehaviour{
 		String id ;
-	 public sendMessageC(String s) {
+		String equipa1;
+		String equipa2;
+	 public sendMessageC(String s,String eq) {
 		id = s;
+		//split
 	}
 		@Override 
 		public void action(){
@@ -51,7 +55,15 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("CLASS");
 			msg.setConversationId(id);
+			
 			// meter o conteudo como sendo o calculo e 	msg.setContent("");
+			
+			float res = 1;//leitura 
+			msg.setContent(String.valueOf(res));
+			
+			
+			
+			//
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
 			

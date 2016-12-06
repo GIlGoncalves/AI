@@ -1,0 +1,15 @@
+Apagar emprestados manualmente e inserir "-" como os outros
+^-.*
+Find_All->Apagar
+^\s
+Apagar
+,\ \w+
+inserir </nome>
+^\w
+inserir <nome>
+</nome>\s
+Enter  e inserir <posicao>
+\s[1|2|3]
+inserir </posicao> e enter
+pode-se fazer o resto apartir disto
+

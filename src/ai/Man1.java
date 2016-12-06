@@ -26,7 +26,7 @@ public HashSet<LigaB> apostas;
 	private Boolean CheckLiga (String nome){
 		Boolean ret = false;
 		for(LigaB a : this.apostas){
-			if(a.nome.equals(nome)) ret = true ;
+			if(a.getNome().equals(nome)) ret = true ;
 		}
 		//ver data
 		return ret;
@@ -117,7 +117,10 @@ public HashSet<LigaB> apostas;
 				SequentialBehaviour seq = new SequentialBehaviour();
 				
 				seq.addSubBehaviour(new sendMessageLiga(newliga));
-	//add liga as listas
+				
+				
+				//add liga as listas
+				
 				myAgent.addBehaviour(seq);
 			} catch (Exception e) {
 				// Nao deu

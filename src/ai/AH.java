@@ -51,7 +51,14 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("HISTORICO");
 			msg.setConversationId(id);
+			
 			// meter o conteudo como sendo o calculo e 	msg.setContent("");
+			
+			
+			float res = 1;
+			msg.setContent(String.valueOf(res));
+			
+			//
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
 			
