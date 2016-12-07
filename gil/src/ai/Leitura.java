@@ -57,6 +57,7 @@ public class Leitura {
                         int s = Integer.parseInt(eElement.getElementsByTagName("status").item(0).getTextContent());
                         boolean status = (s==1);
                         
+                        
                     Jogador p = new Jogador(nome,posicao,idade,valor,status);    
                    
                     jogadores.add(p.clone());

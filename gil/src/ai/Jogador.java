@@ -11,7 +11,7 @@ import java.util.Objects;
 
 /**
  *
- * @author gil
+ * @author gil mudar a skill e o status
  */
 public class Jogador {
     
@@ -28,8 +28,8 @@ public class Jogador {
         this.nome = "";
         this.posicao = "";
         this.idade=-1;
-        this.skill = 0;
-        this.status = true;
+        this.skill = -1;
+        this.status = false;
     }
     
     
@@ -52,7 +52,7 @@ public class Jogador {
 
     @Override
     public String toString() {
-        return "Jogador : \n" + 
+        return "\n Jogador : \n" + 
                 "nome : " + nome + 
                 "\n posicao : " + posicao + 
                 "\n skill : " + skill + 
