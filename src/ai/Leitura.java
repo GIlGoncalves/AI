@@ -30,6 +30,7 @@ public class Leitura {
     public List<Jogador> lerJogadores(String nomeEquipa)   {
         List<Jogador> jogadores = new ArrayList<>();
         try{
+        	
             URL path = Leitura.class.getResource("./Liga-NOS/"+nomeEquipa+".xml");
            File g = new File(path.getFile());
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -100,19 +101,19 @@ public class Leitura {
     }
 }
 
-public int lerJornadas(String equipaCasa) throws IOException{
+public int lerJornadas(String equipaCasa,String liganome) throws IOException{
         
     
          int pontosCasa=0;
          
          int i=1;
-        getFile("./Liga-NOS/Jogos/Resultados/");
+         getFile("./Liga-"+liganome+"/Resultados/");
         
          while(i<=this.count) {
         
              try{
-            
-            URL path = Leitura.class.getResource("./Liga-NOS/Jogos/Resultados/jornada"+i+".xml");
+            	 
+            URL path = Leitura.class.getResource("./Liga-"+liganome+"/Resultados/jornada"+i+".xml");
             File g = new File(path.getFile());
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();

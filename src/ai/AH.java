@@ -32,7 +32,7 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 				myAgent.addBehaviour(seq);
 				
 			}
-			
+			block();
 				
 			}
 		}

@@ -1,4 +1,6 @@
 package ai;
+import java.io.IOException;
+
 import jade.core.*;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.OneShotBehaviour;
@@ -28,13 +30,15 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 			if(msg != null){
 				SequentialBehaviour seq = new SequentialBehaviour();
 				String equipas = msg.getContent();
+				
+				
 				//SLB:FCP
 				seq.addSubBehaviour(new sendMessageC(msg.getConversationId(),equipas));
 				myAgent.addBehaviour(seq);
 				
 			}
 			
-				
+				block();
 			}
 		}
 	
@@ -44,9 +48,16 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 		String id ;
 		String equipa1;
 		String equipa2;
+		String liga;
 	 public sendMessageC(String s,String eq) {
 		id = s;
-		//split
+	
+		String[] parts = eq.split(":");
+		equipa1 = parts[0];
+		equipa2 = parts[1];
+		liga = parts[2];
+		
+		
 	}
 		@Override 
 		public void action(){
@@ -55,10 +66,16 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("CLASS");
 			msg.setConversationId(id);
-			
-			// meter o conteudo como sendo o calculo e 	msg.setContent("");
-			
-			float res = 1;//leitura 
+			Leitura l = new Leitura();
+			float foraP= 0,casaP= 0;
+			//ISTO CRASHA
+			try {
+				casaP = (float) l.lerJornadas(equipa1, liga);
+				 foraP = (float)l.lerJornadas(equipa2, liga);
+			} catch (IOException e) {
+				// Nao deu
+			}
+			float res = casaP-foraP;
 			msg.setContent(String.valueOf(res));
 			
 			

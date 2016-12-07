@@ -32,7 +32,7 @@ public class AE  extends Agent{
 				
 			}
 			
-				
+			block();
 			}
 		}
 	

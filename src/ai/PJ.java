@@ -39,7 +39,7 @@ public class PJ  extends Agent{
 				}
 				
 			}
-			
+			block();
 				
 			}
 		}

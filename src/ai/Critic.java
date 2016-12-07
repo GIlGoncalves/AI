@@ -20,7 +20,7 @@ private LigaB ligacritic;
 private float [][]  res;
 	protected void setup(){
 		super.setup();
-		ligacritic = new LigaB();
+		
 		
 		this.addBehaviour(new ReceiveBehaviour());
 	}
@@ -52,7 +52,8 @@ private float [][]  res;
 					SequentialBehaviour seq = new SequentialBehaviour();
 					 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
 					for(Prediction a : newliga.getPred()){
-						par.addSubBehaviour(new CriticBehaviour(i,a.getSiglaA(),a.getSiglaB(),a.getCasa()) );
+						par.addSubBehaviour(new CriticBehaviour(i,a.getSiglaA(),a.getSiglaB(),newliga.getNome()) );
+						a.setIndex(i);
 						i++;
 					}
 					seq.addSubBehaviour(par);
@@ -253,12 +254,14 @@ private float [][]  res;
 	private class sendMessageACL extends OneShotBehaviour{
 		String a;
 		String b;
+		String liga;
 		String id;
-		public sendMessageACL(String av, String bv,int id){
+		public sendMessageACL(String av, String bv,int id,String liga){
 			super();
 			this.a= av;
 			this.b= bv;
 			this.id = Integer.toString(id);
+			this.liga = liga;
 		}
 		@Override 
 		public void action(){
@@ -270,6 +273,8 @@ private float [][]  res;
 			
 				String s = a.concat(":");
 				s = s.concat(b);
+				s= s.concat(":");
+				s=s.concat(liga);
 				msg.setContent(s);
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
@@ -294,13 +299,18 @@ private float [][]  res;
 		@Override 
 		public void action(){
 			
-			//FAZ CRITICAS  COM O RES E DEPOIS MANDA
-			
+			/*FAZ CRITICAS  COM O RES E DEPOIS MANDA
+
+			   for(int z= 1 ;z<  this.liga.getNJogos();z++){
+			System.out.println("OLA EU SOU O "+ res [z][3]);
+			   }*/
 			AID receiver = new AID();
 			receiver.setLocalName("Man1");
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("CRITIC");
 			try {
+				this.liga.criaRes(this.liga.getNJogos());
+				this.liga.updateRes(res);
 				msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
@@ -323,11 +333,11 @@ private float [][]  res;
 		String at ;
 		String bt;
 		int i;
-		int casa;
-	 public CriticBehaviour(int iv ,String a, String b , int casav) {
+		String liga;
+	 public CriticBehaviour(int iv ,String a, String b , String casav) {
 			at = a;
 			bt = b;
-			casa = casav;
+			liga = casav;
 			i = iv;
 			
 		}
@@ -345,7 +355,7 @@ private float [][]  res;
 					seq2.addSubBehaviour(new receiveMessageAJ());
 					seq3.addSubBehaviour(new sendMessageAH(at,bt,i));
 					seq3.addSubBehaviour(new receiveMessageAH());
-					seq4.addSubBehaviour(new sendMessageACL(at,bt,i));
+					seq4.addSubBehaviour(new sendMessageACL(at,bt,i,liga));
 					seq4.addSubBehaviour(new receiveMessageACL());
 					
 					par.addSubBehaviour(seq1);
