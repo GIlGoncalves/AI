@@ -58,8 +58,8 @@ private LigaB ligacritic;
 						i++;
 					}
 					seq.addSubBehaviour(par); //
-					seq.addSubBehaviour(new ReplyBehaviour());
-					myAgent.addBehaviour(seq);
+					seq.addSubBehaviour(new sendMessageMan());
+					addBehaviour(seq);
 					
 				} catch (Exception e) {
 					// Nao deu
@@ -71,14 +71,8 @@ private LigaB ligacritic;
 		}
 		}
 	
-	private class ReplyBehaviour extends OneShotBehaviour{
-		
-		@Override
-		public void action(){
-			myAgent.addBehaviour(new sendMessageMan());
-		}
-		
-	}
+
+
 	/*
 	*
 	*Behaviours que recebem mensagens dos agentes 
@@ -158,10 +152,11 @@ private LigaB ligacritic;
 		if(msg != null){    
 			
 			ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),3,  Float.valueOf(msg.getContent()));
+			System.out.println(msg.getContent());
 			
 		}
 		
-		
+		block();
 		}
 	}
 
@@ -307,28 +302,26 @@ private LigaB ligacritic;
 		
 		public sendMessageMan(){
 			super();
-		
+		this.liga = new LigaB();
 		}
+		
 		@Override 
 		public void action(){
 			System.out.println("MANDANDO");
-			/*FAZ CRITICAS  COM O RES E DEPOIS MANDA
-
-			   for(int z= 1 ;z<  this.liga.getNJogos();z++){
-			System.out.println("OLA EU SOU O "+ res [z][3]);
-			   }*/
+			
 			AID receiver = new AID();
 			receiver.setLocalName("Man1");
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("CRITIC");
+			
 			try {
 			//	this.liga=ligacritic;
 				
-			//	msg.setContentObject(this.liga);
+				msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
 			} catch (Exception e) {
-				System.out.println("PUTA " );
+				System.out.println("NAO DEU " );
 				 e.printStackTrace();
 			
 			}
