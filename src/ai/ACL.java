@@ -38,7 +38,7 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 				
 			}
 			
-				block();
+			
 			}
 		}
 	
@@ -75,7 +75,8 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 			} catch (IOException e) {
 				// Nao deu
 			}
-			float res = casaP-foraP;
+			foraP= 2;casaP= 5;
+			float res = 3;//casaP-foraP;
 			msg.setContent(String.valueOf(res));
 			
 			

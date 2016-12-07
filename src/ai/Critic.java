@@ -17,7 +17,7 @@ import jade.lang.acl.MessageTemplate;
 public class Critic  extends Agent{
 	
 private LigaB ligacritic;
-private float [][]  res;
+
 	protected void setup(){
 		super.setup();
 		
@@ -47,19 +47,20 @@ private float [][]  res;
 				LigaB newliga;
 				try {
 					newliga = (LigaB) msg.getContentObject();
-					res = new float [newliga.getNJogos()][4] ;
+					ligacritic = newliga;
+					ligacritic.criaRes(ligacritic.getNJogos());
 					int i = 0;
 					SequentialBehaviour seq = new SequentialBehaviour();
 					 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
 					for(Prediction a : newliga.getPred()){
-						par.addSubBehaviour(new CriticBehaviour(i,a.getSiglaA(),a.getSiglaB(),newliga.getNome()) );
+						par.addSubBehaviour(CriticBehaviour(i,a.getSiglaA(),a.getSiglaB(),newliga.getNome()) );
 						a.setIndex(i);
 						i++;
 					}
 					seq.addSubBehaviour(par);
 					seq.addSubBehaviour(new sendMessageMan());
 					myAgent.addBehaviour(seq);
-					ligacritic = newliga;
+					
 				} catch (Exception e) {
 					// Nao deu
 				}
@@ -87,7 +88,7 @@ private float [][]  res;
 		ACLMessage msg = receive(mtRespEstado);
 		
 		if(msg != null){    
-			res[Integer.valueOf(msg.getConversationId())][0] =  Float.valueOf(msg.getContent());
+			ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),0,  Float.valueOf(msg.getContent()));
 			
 		}
 		
@@ -106,7 +107,8 @@ private float [][]  res;
 		ACLMessage msg = receive(mtRespJog);
 		
 		if(msg != null){    
-			res[Integer.valueOf(msg.getConversationId())][1] =  Float.valueOf(msg.getContent());
+	
+			ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),1,  Float.valueOf(msg.getContent()));
 			
 		}
 		
@@ -125,7 +127,8 @@ private float [][]  res;
 		ACLMessage msg = receive(mtRespHist);
 		
 		if(msg != null){    
-			res[Integer.valueOf(msg.getConversationId())][2] =  Float.valueOf(msg.getContent());
+		
+			ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),2,  Float.valueOf(msg.getContent()));
 			
 		}
 		
@@ -145,7 +148,8 @@ private float [][]  res;
 		ACLMessage msg = receive(mtRespClass);
 		
 		if(msg != null){    
-			res[Integer.valueOf(msg.getConversationId())][3] =  Float.valueOf(msg.getContent());
+			
+			ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),3,  Float.valueOf(msg.getContent()));
 			
 		}
 		
@@ -294,11 +298,11 @@ private float [][]  res;
 		LigaB liga;
 		public sendMessageMan(){
 			super();
-			this.liga=  ligacritic;
+			
 		}
 		@Override 
 		public void action(){
-			
+			System.out.println("MANDANDO");
 			/*FAZ CRITICAS  COM O RES E DEPOIS MANDA
 
 			   for(int z= 1 ;z<  this.liga.getNJogos();z++){
@@ -309,8 +313,8 @@ private float [][]  res;
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("CRITIC");
 			try {
-				this.liga.criaRes(this.liga.getNJogos());
-				this.liga.updateRes(res);
+				this.liga=ligacritic;
+				
 				msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
@@ -329,12 +333,38 @@ private float [][]  res;
 	*encadeia todos os procedimentos para preencer um jogo no res 
 	*
 	*/
+	
+	private ParallelBehaviour CriticBehaviour(int i ,String at, String bt , String liga){
+		
+		 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
+		 SequentialBehaviour seq1 = new SequentialBehaviour();
+		 SequentialBehaviour seq2 = new SequentialBehaviour();
+		 SequentialBehaviour seq3 = new SequentialBehaviour();
+		 SequentialBehaviour seq4 = new SequentialBehaviour();
+			
+			seq1.addSubBehaviour(new sendMessageAE(at,bt,i));
+			seq1.addSubBehaviour(new receiveMessageAE());
+			seq2.addSubBehaviour(new sendMessageAJ(at,bt,i));
+			seq2.addSubBehaviour(new receiveMessageAJ());
+			seq3.addSubBehaviour(new sendMessageAH(at,bt,i));
+			seq3.addSubBehaviour(new receiveMessageAH());
+			seq4.addSubBehaviour(new sendMessageACL(at,bt,i,liga));
+			seq4.addSubBehaviour(new receiveMessageACL());
+			
+			par.addSubBehaviour(seq1);
+			par.addSubBehaviour(seq2);
+			par.addSubBehaviour(seq3); 
+			par.addSubBehaviour(seq4); 
+			return par;
+		
+	}
+	/*
 	private class CriticBehaviour extends OneShotBehaviour{
 		String at ;
 		String bt;
 		int i;
 		String liga;
-	 public CriticBehaviour(int iv ,String a, String b , String casav) {
+	 public CriticBehaviour(int iv ,String a, String b , String ligav) {
 			at = a;
 			bt = b;
 			liga = casav;
@@ -368,5 +398,5 @@ private float [][]  res;
 			}
 			
 			
-		}
+		}*/
 }

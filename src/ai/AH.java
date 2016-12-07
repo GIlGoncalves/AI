@@ -32,7 +32,7 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 				myAgent.addBehaviour(seq);
 				
 			}
-			block();
+		
 				
 			}
 		}
@@ -55,7 +55,7 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 			// meter o conteudo como sendo o calculo e 	msg.setContent("");
 			
 			
-			float res = 1;
+			float res = 2;
 			msg.setContent(String.valueOf(res));
 			
 			//

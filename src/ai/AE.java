@@ -32,7 +32,7 @@ public class AE  extends Agent{
 				
 			}
 			
-			block();
+		
 			}
 		}
 	
@@ -42,6 +42,7 @@ public class AE  extends Agent{
 		String id ;
 	 public sendMessageC(String s) {
 		id = s;
+	
 	}
 		@Override 
 		public void action(){
@@ -54,7 +55,7 @@ public class AE  extends Agent{
 			
 			// meter o conteudo como sendo o calculo 	msg.setContent("");
 			
-			float res = 1;
+			float res = 0;
 			msg.setContent(String.valueOf(res));
 			
 			
