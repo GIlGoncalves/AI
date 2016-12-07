@@ -44,21 +44,21 @@ private LigaB ligacritic;
 			ACLMessage msg = receive(mtRespCritico);
 			
 			if(msg != null){
-				LigaB newliga;
+				
 				try {
-					newliga = (LigaB) msg.getContentObject();
-					ligacritic = newliga;
+					
+					ligacritic = (LigaB) msg.getContentObject();
 					ligacritic.criaRes(ligacritic.getNJogos());
 					int i = 0;
 					SequentialBehaviour seq = new SequentialBehaviour();
 					 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
-					for(Prediction a : newliga.getPred()){
-						par.addSubBehaviour(CriticBehaviour(i,a.getSiglaA(),a.getSiglaB(),newliga.getNome()) );
+					for(Prediction a : ligacritic.getPred()){
+						par.addSubBehaviour( CriticBehaviour(i,a.getSiglaA(),a.getSiglaB(),ligacritic.getNome()) );
 						a.setIndex(i);
 						i++;
 					}
-					seq.addSubBehaviour(par);
-					seq.addSubBehaviour(new sendMessageMan());
+					seq.addSubBehaviour(par); //
+					seq.addSubBehaviour(new ReplyBehaviour());
 					myAgent.addBehaviour(seq);
 					
 				} catch (Exception e) {
@@ -71,6 +71,14 @@ private LigaB ligacritic;
 		}
 		}
 	
+	private class ReplyBehaviour extends OneShotBehaviour{
+		
+		@Override
+		public void action(){
+			myAgent.addBehaviour(new sendMessageMan());
+		}
+		
+	}
 	/*
 	*
 	*Behaviours que recebem mensagens dos agentes 
@@ -295,10 +303,11 @@ private LigaB ligacritic;
 	*
 	*/
 	private class sendMessageMan extends OneShotBehaviour{
-		LigaB liga;
+		private LigaB liga;
+		
 		public sendMessageMan(){
 			super();
-			
+		
 		}
 		@Override 
 		public void action(){
@@ -313,13 +322,14 @@ private LigaB ligacritic;
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("CRITIC");
 			try {
-				this.liga=ligacritic;
+			//	this.liga=ligacritic;
 				
-				msg.setContentObject(this.liga);
+			//	msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
 			} catch (Exception e) {
-				// Nao deu
+				System.out.println("PUTA " );
+				 e.printStackTrace();
 			
 			}
 			
@@ -342,18 +352,18 @@ private LigaB ligacritic;
 		 SequentialBehaviour seq3 = new SequentialBehaviour();
 		 SequentialBehaviour seq4 = new SequentialBehaviour();
 			
-			seq1.addSubBehaviour(new sendMessageAE(at,bt,i));
+		/*	seq1.addSubBehaviour(new sendMessageAE(at,bt,i));
 			seq1.addSubBehaviour(new receiveMessageAE());
 			seq2.addSubBehaviour(new sendMessageAJ(at,bt,i));
 			seq2.addSubBehaviour(new receiveMessageAJ());
 			seq3.addSubBehaviour(new sendMessageAH(at,bt,i));
-			seq3.addSubBehaviour(new receiveMessageAH());
+			seq3.addSubBehaviour(new receiveMessageAH());*/
 			seq4.addSubBehaviour(new sendMessageACL(at,bt,i,liga));
 			seq4.addSubBehaviour(new receiveMessageACL());
 			
-			par.addSubBehaviour(seq1);
+			/*par.addSubBehaviour(seq1);
 			par.addSubBehaviour(seq2);
-			par.addSubBehaviour(seq3); 
+			par.addSubBehaviour(seq3); */
 			par.addSubBehaviour(seq4); 
 			return par;
 		
@@ -367,7 +377,7 @@ private LigaB ligacritic;
 	 public CriticBehaviour(int iv ,String a, String b , String ligav) {
 			at = a;
 			bt = b;
-			liga = casav;
+			liga = ligav;
 			i = iv;
 			
 		}
