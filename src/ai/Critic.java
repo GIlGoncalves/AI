@@ -17,10 +17,10 @@ import jade.lang.acl.MessageTemplate;
 public class Critic  extends Agent{
 	
 private LigaB ligacritic;
-private float [][]  res;
+
 	protected void setup(){
 		super.setup();
-		ligacritic = new LigaB();
+		
 		
 		this.addBehaviour(new ReceiveBehaviour());
 	}
@@ -44,99 +44,147 @@ private float [][]  res;
 			ACLMessage msg = receive(mtRespCritico);
 			
 			if(msg != null){
-				LigaB newliga;
+				
 				try {
-					newliga = (LigaB) msg.getContentObject();
-					res = new float [newliga.getNJogos()][4] ;
+					
+					ligacritic = (LigaB) msg.getContentObject();
+					ligacritic.criaRes(ligacritic.getNJogos());
 					int i = 0;
 					SequentialBehaviour seq = new SequentialBehaviour();
 					 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
-					for(Prediction a : newliga.getPred()){
-						par.addSubBehaviour(new CriticBehaviour(i,a.getSiglaA(),a.getSiglaB(),a.getCasa()) );
+					 
+					for(Prediction a : ligacritic.getPred()){
+					 par.addSubBehaviour( CriticBehaviour(i,a.getSiglaA(),a.getSiglaB(),ligacritic.getNome()));	
+						
+					  
+						
+						a.setIndex(i);
 						i++;
+						
 					}
-					seq.addSubBehaviour(par);
+					 seq.addSubBehaviour(par);
 					seq.addSubBehaviour(new sendMessageMan());
-					myAgent.addBehaviour(seq);
-					ligacritic = newliga;
+					addBehaviour(seq);
+					
 				} catch (Exception e) {
 					// Nao deu
 				}
 				                             
-			}
-			//else mandar not understood?
+			}else block();
+			
 			
 		}
 		}
 	
+
+
 	/*
 	*
 	*Behaviours que recebem mensagens dos agentes 
 	*
 	*/
-	
-	private class receiveMessageAE extends ReceiveBehaviour{
+public class receiveMessageAE extends SimpleBehaviour {
+
+
+	  
+	  private boolean finished = false;
+		
+		
 		
 		@Override
 		public void action(){
-		
-		MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
-		MessageTemplate mtE = MessageTemplate.MatchOntology("ESTADO");
-		MessageTemplate mtRespEstado = MessageTemplate.and(mt, mtE);
-		ACLMessage msg = receive(mtRespEstado);
-		
-		if(msg != null){    
-			res[Integer.valueOf(msg.getConversationId())][0] =  Float.valueOf(msg.getContent());
+			MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
+			MessageTemplate mtE = MessageTemplate.MatchOntology("ESTADO");
+			MessageTemplate mtRespEstado = MessageTemplate.and(mt, mtE);
+			ACLMessage msg = receive(mtRespEstado);
 			
-		}
+			if(msg != null){    
+				ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),0,  Float.valueOf(msg.getContent()));
+			finished = true;
+		}else block();
 		
 		
 		}
+
+	  public boolean done() {
+	    return finished;
+	  }
 	}
+
+		
 	
-	private class receiveMessageAJ extends ReceiveBehaviour{
-		
-		@Override
-		public void action(){
-		
-		MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
-		MessageTemplate mtJ = MessageTemplate.MatchOntology("JOGADORES");
-		MessageTemplate mtRespJog= MessageTemplate.and(mt, mtJ);
-		ACLMessage msg = receive(mtRespJog);
-		
-		if(msg != null){    
-			res[Integer.valueOf(msg.getConversationId())][1] =  Float.valueOf(msg.getContent());
+	public class receiveMessageAJ extends SimpleBehaviour {
+
+
+		  
+		  private boolean finished = false;
 			
-		}
-		
-		
-		}
-	}
-	
-	private class receiveMessageAH extends ReceiveBehaviour{
-		
-		@Override
-		public void action(){
-		
-		MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
-		MessageTemplate mtH = MessageTemplate.MatchOntology("HISTORICO");
-		MessageTemplate mtRespHist= MessageTemplate.and(mt, mtH);
-		ACLMessage msg = receive(mtRespHist);
-		
-		if(msg != null){    
-			res[Integer.valueOf(msg.getConversationId())][2] =  Float.valueOf(msg.getContent());
 			
+			
+			@Override
+			public void action(){
+			
+				MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
+				MessageTemplate mtJ = MessageTemplate.MatchOntology("JOGADORES");
+				MessageTemplate mtRespJog= MessageTemplate.and(mt, mtJ);
+				ACLMessage msg = receive(mtRespJog);
+				
+				if(msg != null){    
+			
+					ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),1,  Float.valueOf(msg.getContent()));
+				finished = true;
+			}else block();
+			
+			
+			}
+
+		  public boolean done() {
+		    return finished;
+		  }
 		}
-		
-		
+	
+
+	
+	public class receiveMessageAH extends SimpleBehaviour {
+
+
+		  
+		  private boolean finished = false;
+			
+			
+			
+			@Override
+			public void action(){
+			
+			MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
+			MessageTemplate mtH = MessageTemplate.MatchOntology("HISTORICO");
+			MessageTemplate mtRespHist= MessageTemplate.and(mt, mtH);
+			ACLMessage msg = receive(mtRespHist);
+			
+			if(msg != null){    
+			
+				ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),2,  Float.valueOf(msg.getContent()));
+				finished = true;
+			}else block();
+			
+			
+			}
+
+		  public boolean done() {
+		    return finished;
+		  }
 		}
-	}
 	
+
+public class receiveMessageACL extends SimpleBehaviour {
+
+
+  
+  private boolean finished = false;
 	
-	private class receiveMessageACL extends ReceiveBehaviour{
-		
-		@Override
-		public void action(){
+	@Override
+	public void action() 
+	{
 		
 		MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
 		MessageTemplate mtC = MessageTemplate.MatchOntology("CLASS");
@@ -144,13 +192,21 @@ private float [][]  res;
 		ACLMessage msg = receive(mtRespClass);
 		
 		if(msg != null){    
-			res[Integer.valueOf(msg.getConversationId())][3] =  Float.valueOf(msg.getContent());
 			
-		}
+			ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),3,  Float.valueOf(msg.getContent()));
+			
+			 finished = true;
+			
+		}else {
+		      block();
+	    }
 		
-		
-		}
 	}
+
+  public boolean done() {
+    return finished;
+  }
+}
 
 	/*
 	*
@@ -253,12 +309,14 @@ private float [][]  res;
 	private class sendMessageACL extends OneShotBehaviour{
 		String a;
 		String b;
+		String liga;
 		String id;
-		public sendMessageACL(String av, String bv,int id){
+		public sendMessageACL(String av, String bv,int id,String liga){
 			super();
 			this.a= av;
 			this.b= bv;
 			this.id = Integer.toString(id);
+			this.liga = liga;
 		}
 		@Override 
 		public void action(){
@@ -270,6 +328,8 @@ private float [][]  res;
 			
 				String s = a.concat(":");
 				s = s.concat(b);
+				s= s.concat(":");
+				s=s.concat(liga);
 				msg.setContent(s);
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
@@ -286,26 +346,31 @@ private float [][]  res;
 	*
 	*/
 	private class sendMessageMan extends OneShotBehaviour{
-		LigaB liga;
+		private LigaB liga;
+		
 		public sendMessageMan(){
 			super();
-			this.liga=  ligacritic;
+		this.liga = new LigaB();
 		}
+		
 		@Override 
 		public void action(){
-			
-			//FAZ CRITICAS  COM O RES E DEPOIS MANDA
+			System.out.println("MANDANDO");
 			
 			AID receiver = new AID();
 			receiver.setLocalName("Man1");
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("CRITIC");
+			
 			try {
+				this.liga=ligacritic;
+				
 				msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
 			} catch (Exception e) {
-				// Nao deu
+				System.out.println("NAO DEU " );
+				 e.printStackTrace();
 			
 			}
 			
@@ -319,44 +384,31 @@ private float [][]  res;
 	*encadeia todos os procedimentos para preencer um jogo no res 
 	*
 	*/
-	private class CriticBehaviour extends OneShotBehaviour{
-		String at ;
-		String bt;
-		int i;
-		int casa;
-	 public CriticBehaviour(int iv ,String a, String b , int casav) {
-			at = a;
-			bt = b;
-			casa = casav;
-			i = iv;
+	
+	private ParallelBehaviour CriticBehaviour(int i ,String at, String bt , String liga){
+		
+		 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
+		 SequentialBehaviour seq1 = new SequentialBehaviour();
+		 SequentialBehaviour seq2 = new SequentialBehaviour();
+		 SequentialBehaviour seq3 = new SequentialBehaviour();
+		 SequentialBehaviour seq4 = new SequentialBehaviour();
 			
-		}
-			@Override 
-			public void action(){
-				 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
-				 SequentialBehaviour seq1 = new SequentialBehaviour();
-				 SequentialBehaviour seq2 = new SequentialBehaviour();
-				 SequentialBehaviour seq3 = new SequentialBehaviour();
-				 SequentialBehaviour seq4 = new SequentialBehaviour();
-					
-					seq1.addSubBehaviour(new sendMessageAE(at,bt,i));
-					seq1.addSubBehaviour(new receiveMessageAE());
-					seq2.addSubBehaviour(new sendMessageAJ(at,bt,i));
-					seq2.addSubBehaviour(new receiveMessageAJ());
-					seq3.addSubBehaviour(new sendMessageAH(at,bt,i));
-					seq3.addSubBehaviour(new receiveMessageAH());
-					seq4.addSubBehaviour(new sendMessageACL(at,bt,i));
-					seq4.addSubBehaviour(new receiveMessageACL());
-					
-					par.addSubBehaviour(seq1);
-					par.addSubBehaviour(seq2);
-					par.addSubBehaviour(seq3); 
-					par.addSubBehaviour(seq4); 
-					
-					myAgent.addBehaviour(par);
-					
-			}
+		seq1.addSubBehaviour(new sendMessageAE(at,bt,i));
+			seq1.addSubBehaviour(new receiveMessageAE());
+			seq2.addSubBehaviour(new sendMessageAJ(at,bt,i));
+			seq2.addSubBehaviour(new receiveMessageAJ());
+			seq3.addSubBehaviour(new sendMessageAH(at,bt,i));
+			seq3.addSubBehaviour(new receiveMessageAH());
+			seq4.addSubBehaviour(new sendMessageACL(at,bt,i,liga));
+			seq4.addSubBehaviour(new receiveMessageACL());
 			
-			
-		}
+			par.addSubBehaviour(seq1);
+			par.addSubBehaviour(seq2);
+			par.addSubBehaviour(seq3); 
+			par.addSubBehaviour(seq4); 
+			return par;
+		
+	}
+
+
 }

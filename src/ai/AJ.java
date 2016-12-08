@@ -31,10 +31,11 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 				seq.addSubBehaviour(new sendMessageC(msg.getConversationId()));
 				myAgent.addBehaviour(seq);
 				
-			}
-			
+			}else block();
+		
 				
 			}
+		
 		}
 	
 	

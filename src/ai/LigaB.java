@@ -42,7 +42,18 @@ public class LigaB implements Serializable{
    public void addPred(Prediction x ){
 	   Jogos.add(x);
    }
-   public void  updateRes(float [][] a ){
-	   this.res =  a ;
+   public void  updateRes(int i ,int x ,float y){
+	   res[i][x] = y ;
+	  
+	   }
+	   
+   
+   public float[] getCriterios(int index){
+	   float ret [] = new float [4];
+	   for(int i=0; i < 4 ; i++){
+		   ret[i] = res[index][i];
+	   }
+	   
+	   return ret;
    }
 }

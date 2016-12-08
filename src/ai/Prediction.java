@@ -14,6 +14,7 @@ private int Casa;
 private float oc;
 private float oe;
 private float of;
+private int index;
 private GregorianCalendar data;//nao ta bom
 
 
@@ -33,6 +34,12 @@ public String getSiglaA() {
 }
 public void setSiglaA(String siglaA) {
 	this.siglaA = siglaA;
+}
+public int getIndex() {
+	return index;
+}
+public void setIndex(int siglaA) {
+	this.index = siglaA;
 }
 public String getSiglaB() {
 	return siglaB;
