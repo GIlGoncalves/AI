@@ -38,7 +38,7 @@ public class PJ  extends Agent{
 					// Nao deu
 				}
 				
-			}
+			}else
 			block();
 				
 			}

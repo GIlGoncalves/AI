@@ -52,12 +52,17 @@ private LigaB ligacritic;
 					int i = 0;
 					SequentialBehaviour seq = new SequentialBehaviour();
 					 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
+					 
 					for(Prediction a : ligacritic.getPred()){
-						par.addSubBehaviour( CriticBehaviour(i,a.getSiglaA(),a.getSiglaB(),ligacritic.getNome()) );
+					 par.addSubBehaviour( CriticBehaviour(i,a.getSiglaA(),a.getSiglaB(),ligacritic.getNome()));	
+						
+					  
+						
 						a.setIndex(i);
 						i++;
+						
 					}
-					seq.addSubBehaviour(par); //
+					 seq.addSubBehaviour(par);
 					seq.addSubBehaviour(new sendMessageMan());
 					addBehaviour(seq);
 					
@@ -65,8 +70,8 @@ private LigaB ligacritic;
 					// Nao deu
 				}
 				                             
-			}
-			//else mandar not understood?
+			}else block();
+			
 			
 		}
 		}
@@ -78,71 +83,108 @@ private LigaB ligacritic;
 	*Behaviours que recebem mensagens dos agentes 
 	*
 	*/
-	
-	private class receiveMessageAE extends ReceiveBehaviour{
+public class receiveMessageAE extends SimpleBehaviour {
+
+
+	  
+	  private boolean finished = false;
+		
+		
 		
 		@Override
 		public void action(){
-		
-		MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
-		MessageTemplate mtE = MessageTemplate.MatchOntology("ESTADO");
-		MessageTemplate mtRespEstado = MessageTemplate.and(mt, mtE);
-		ACLMessage msg = receive(mtRespEstado);
-		
-		if(msg != null){    
-			ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),0,  Float.valueOf(msg.getContent()));
+			MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
+			MessageTemplate mtE = MessageTemplate.MatchOntology("ESTADO");
+			MessageTemplate mtRespEstado = MessageTemplate.and(mt, mtE);
+			ACLMessage msg = receive(mtRespEstado);
 			
-		}
+			if(msg != null){    
+				ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),0,  Float.valueOf(msg.getContent()));
+			finished = true;
+		}else block();
 		
 		
 		}
+
+	  public boolean done() {
+	    return finished;
+	  }
 	}
+
+		
 	
-	private class receiveMessageAJ extends ReceiveBehaviour{
-		
-		@Override
-		public void action(){
-		
-		MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
-		MessageTemplate mtJ = MessageTemplate.MatchOntology("JOGADORES");
-		MessageTemplate mtRespJog= MessageTemplate.and(mt, mtJ);
-		ACLMessage msg = receive(mtRespJog);
-		
-		if(msg != null){    
-	
-			ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),1,  Float.valueOf(msg.getContent()));
+	public class receiveMessageAJ extends SimpleBehaviour {
+
+
+		  
+		  private boolean finished = false;
 			
-		}
-		
-		
-		}
-	}
-	
-	private class receiveMessageAH extends ReceiveBehaviour{
-		
-		@Override
-		public void action(){
-		
-		MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
-		MessageTemplate mtH = MessageTemplate.MatchOntology("HISTORICO");
-		MessageTemplate mtRespHist= MessageTemplate.and(mt, mtH);
-		ACLMessage msg = receive(mtRespHist);
-		
-		if(msg != null){    
-		
-			ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),2,  Float.valueOf(msg.getContent()));
 			
+			
+			@Override
+			public void action(){
+			
+				MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
+				MessageTemplate mtJ = MessageTemplate.MatchOntology("JOGADORES");
+				MessageTemplate mtRespJog= MessageTemplate.and(mt, mtJ);
+				ACLMessage msg = receive(mtRespJog);
+				
+				if(msg != null){    
+			
+					ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),1,  Float.valueOf(msg.getContent()));
+				finished = true;
+			}else block();
+			
+			
+			}
+
+		  public boolean done() {
+		    return finished;
+		  }
 		}
-		
-		
+	
+
+	
+	public class receiveMessageAH extends SimpleBehaviour {
+
+
+		  
+		  private boolean finished = false;
+			
+			
+			
+			@Override
+			public void action(){
+			
+			MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
+			MessageTemplate mtH = MessageTemplate.MatchOntology("HISTORICO");
+			MessageTemplate mtRespHist= MessageTemplate.and(mt, mtH);
+			ACLMessage msg = receive(mtRespHist);
+			
+			if(msg != null){    
+			
+				ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),2,  Float.valueOf(msg.getContent()));
+				finished = true;
+			}else block();
+			
+			
+			}
+
+		  public boolean done() {
+		    return finished;
+		  }
 		}
-	}
 	
+
+public class receiveMessageACL extends SimpleBehaviour {
+
+
+  
+  private boolean finished = false;
 	
-	private class receiveMessageACL extends ReceiveBehaviour{
-		
-		@Override
-		public void action(){
+	@Override
+	public void action() 
+	{
 		
 		MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
 		MessageTemplate mtC = MessageTemplate.MatchOntology("CLASS");
@@ -152,13 +194,19 @@ private LigaB ligacritic;
 		if(msg != null){    
 			
 			ligacritic.updateRes(Integer.valueOf(msg.getConversationId()),3,  Float.valueOf(msg.getContent()));
-			System.out.println(msg.getContent());
 			
-		}
+			 finished = true;
+			
+		}else {
+		      block();
+	    }
 		
-		block();
-		}
 	}
+
+  public boolean done() {
+    return finished;
+  }
+}
 
 	/*
 	*
@@ -315,7 +363,7 @@ private LigaB ligacritic;
 			msg.setOntology("CRITIC");
 			
 			try {
-			//	this.liga=ligacritic;
+				this.liga=ligacritic;
 				
 				msg.setContentObject(this.liga);
 				msg.addReceiver(receiver);
@@ -345,61 +393,22 @@ private LigaB ligacritic;
 		 SequentialBehaviour seq3 = new SequentialBehaviour();
 		 SequentialBehaviour seq4 = new SequentialBehaviour();
 			
-		/*	seq1.addSubBehaviour(new sendMessageAE(at,bt,i));
+		seq1.addSubBehaviour(new sendMessageAE(at,bt,i));
 			seq1.addSubBehaviour(new receiveMessageAE());
 			seq2.addSubBehaviour(new sendMessageAJ(at,bt,i));
 			seq2.addSubBehaviour(new receiveMessageAJ());
 			seq3.addSubBehaviour(new sendMessageAH(at,bt,i));
-			seq3.addSubBehaviour(new receiveMessageAH());*/
+			seq3.addSubBehaviour(new receiveMessageAH());
 			seq4.addSubBehaviour(new sendMessageACL(at,bt,i,liga));
 			seq4.addSubBehaviour(new receiveMessageACL());
 			
-			/*par.addSubBehaviour(seq1);
+			par.addSubBehaviour(seq1);
 			par.addSubBehaviour(seq2);
-			par.addSubBehaviour(seq3); */
+			par.addSubBehaviour(seq3); 
 			par.addSubBehaviour(seq4); 
 			return par;
 		
 	}
-	/*
-	private class CriticBehaviour extends OneShotBehaviour{
-		String at ;
-		String bt;
-		int i;
-		String liga;
-	 public CriticBehaviour(int iv ,String a, String b , String ligav) {
-			at = a;
-			bt = b;
-			liga = ligav;
-			i = iv;
-			
-		}
-			@Override 
-			public void action(){
-				 ParallelBehaviour par = new ParallelBehaviour( ParallelBehaviour.WHEN_ALL );
-				 SequentialBehaviour seq1 = new SequentialBehaviour();
-				 SequentialBehaviour seq2 = new SequentialBehaviour();
-				 SequentialBehaviour seq3 = new SequentialBehaviour();
-				 SequentialBehaviour seq4 = new SequentialBehaviour();
-					
-					seq1.addSubBehaviour(new sendMessageAE(at,bt,i));
-					seq1.addSubBehaviour(new receiveMessageAE());
-					seq2.addSubBehaviour(new sendMessageAJ(at,bt,i));
-					seq2.addSubBehaviour(new receiveMessageAJ());
-					seq3.addSubBehaviour(new sendMessageAH(at,bt,i));
-					seq3.addSubBehaviour(new receiveMessageAH());
-					seq4.addSubBehaviour(new sendMessageACL(at,bt,i,liga));
-					seq4.addSubBehaviour(new receiveMessageACL());
-					
-					par.addSubBehaviour(seq1);
-					par.addSubBehaviour(seq2);
-					par.addSubBehaviour(seq3); 
-					par.addSubBehaviour(seq4); 
-					
-					myAgent.addBehaviour(par);
-					
-			}
-			
-			
-		}*/
+
+
 }

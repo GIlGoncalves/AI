@@ -32,11 +32,11 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 				String equipas = msg.getContent();
 				
 				
-				//SLB:FCP
+				//SLB:FCP:NOS
 				seq.addSubBehaviour(new sendMessageC(msg.getConversationId(),equipas));
 				myAgent.addBehaviour(seq);
 				
-			}
+			}else block();
 			
 			
 			}
@@ -68,20 +68,20 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 			msg.setConversationId(id);
 			Leitura l = new Leitura();
 			float foraP= 0,casaP= 0;
-			//ISTO CRASHA
+			
 			try {
 				casaP = (float) l.lerJornadas(equipa1, liga);
 				 foraP = (float)l.lerJornadas(equipa2, liga);
 			} catch (IOException e) {
 				// Nao deu
 			}
-			foraP= 2;casaP= 5;
-			float res = 3;//casaP-foraP;
+			
+			float res = casaP-foraP;
 			msg.setContent(String.valueOf(res));
 			
 			
 			
-			//
+			
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
 			

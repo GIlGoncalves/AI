@@ -30,7 +30,7 @@ public class AE  extends Agent{
 				seq.addSubBehaviour(new sendMessageC(msg.getConversationId()));
 				myAgent.addBehaviour(seq);
 				
-			}
+			}else block();
 			
 		
 			}
