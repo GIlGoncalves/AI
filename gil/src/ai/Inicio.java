@@ -183,6 +183,7 @@ public class Inicio extends javax.swing.JFrame {
         
         else {
             this.info = new TrataInformacao();
+            this.leitura= new Leitura();
             
             String liga = this.ligas.getSelectedItem().toString();
             String equipaC = this.equipaCasa.getSelectedItem().toString();
@@ -190,15 +191,17 @@ public class Inicio extends javax.swing.JFrame {
             String [ ]equipas;
             equipas =this.equipa.procuraEquipa(liga, equipaC, equipaF);
             
-           
+          
             
-            this.info.equipa(this.leitura.lerJogadores(equipas[0]));
-             
-        System.out.println(this.info.toString());
         
-            this.info.tamanhao();
-             
-        }  
+        
+                    System.out.println((this.leitura.ultimoJogo(equipas[0])).get(Calendar.DAY_OF_MONTH));
+            
+                   
+
+        
+        }
+        
         
     }//GEN-LAST:event_jButton1MouseClicked
 

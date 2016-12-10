@@ -41,7 +41,7 @@ public class TrataInformacao {
         this.equipa=m.getEquipa();
     }
 
-    public void  equipa(List<Jogador> m) {
+    public Map<String,List<Jogador>>  equipa(List<Jogador> m) {
         List<Jogador> tmp;
          List<Jogador> naoInscrito;
        
@@ -77,7 +77,7 @@ public class TrataInformacao {
         
         equipaTotal(naoInscrito);
         
-        
+        return this.equipa;
         
         
     }
@@ -364,6 +364,26 @@ public class TrataInformacao {
         
         return minimo;
        
+    }
+    
+    public float mediaIdade() {
+    
+       float mediaIdade=0;
+       int conta=0;
+        int i ;
+       for(List<Jogador> j : this.equipa.values()) {
+         
+           for(i=0;i<j.size();i++) {
+           
+               mediaIdade=mediaIdade+j.get(i).getIdade();
+             conta++;
+           }
+       }
+        
+    
+    
+    
+        return mediaIdade/conta;
     }
     
     
