@@ -5,33 +5,34 @@
  */
 package ai;
 
-import java.io.IOException;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 
 /**
  *
  * @author gil
  */
 public class Inicio extends javax.swing.JFrame {
-
-    private final String [] ligaPortuguesa = {"Arouca","Belenenses","Benfica","Boavista","Desp. Chaves"
-    ,"Estoril","FC Porto","Feirense","Marítimo","Moreirense","Nacional","Paços Ferreira"
-    ,"Rio Ave","Sp. Braga","Sporting","Tondela","V. Guimarães","V. Setúbal"};
-    private Leitura leitura;
-    private NomesEquipas equipa;
-    private TrataInformacao info;
+  private final Map<String,String> nomes;
+          
+   
     
     /**
      * Creates new form Inicio
      */
     public Inicio() {
         initComponents();
-        this.leitura= new Leitura();
-        this.equipa = new NomesEquipas();
-        this.info = new TrataInformacao();
+        this.nomes= new HashMap<>();
+        this.nomes.put("Liga Portuguesa", "NOS");
+        this.nomes.put("Liga Espanhola", "LFP");
+        this.nomes.put("Premier League", "EPL");
+        this.nomes.put("Bundesliga", "DFB");
+        this.nomes.put("Serie A", "SA");
+        this.nomes.put("Ligue 1", "FFF");
+        
+        this.resultado.setVisible(false);
+        this.vencedores.setVisible(false);
+        
+        
     }
 
     /**
@@ -44,20 +45,17 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        equipaCasa = new javax.swing.JComboBox<>();
         ligas = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        equipaFora = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        vencedores = new javax.swing.JTextArea();
+        resultado = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\gil\\Pictures\\frases-de-futebol.jpg")); // NOI18N
         jLabel2.setText("jLabel2");
-
-        jLabel1.setText("Equipa da casa");
 
         ligas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Liga Espanhola", "Premier League", "Bundesliga", "Serie A", "Liga Portuguesa", "Ligue 1" }));
         ligas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -71,14 +69,18 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel3.setText("Selecione a liga");
 
-        jLabel4.setText("Equipa fora");
-
         jButton1.setText("apostar");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
             }
         });
+
+        vencedores.setColumns(20);
+        vencedores.setRows(5);
+        jScrollPane1.setViewportView(vencedores);
+
+        resultado.setText("Resultado");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -87,50 +89,43 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(55, 55, 55)
+                                .addComponent(jButton1)))
+                        .addGap(0, 339, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(55, 55, 55)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(ligas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(equipaCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(equipaFora, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(jButton1)))
-                .addContainerGap(349, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ligas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(resultado))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(11, 11, 11)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(ligas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(equipaCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(equipaFora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(ligas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(160, 160, 160)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(resultado)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
         pack();
@@ -140,25 +135,17 @@ public class Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
         int i;
         if(this.ligas.getSelectedItem().toString().equals("Liga Portuguesa")) {
-             this.equipaCasa.setVisible(true);
-            this.equipaFora.setVisible(true);
-             this.equipaCasa.removeAllItems();
-            this.equipaFora.removeAllItems();
+           this.resultado.setVisible(true);
+            this.vencedores.setVisible(true);
             
-             for(i=0;i<this.ligaPortuguesa.length;i++) { 
-             
-            this.equipaCasa.addItem(this.ligaPortuguesa[i]);
-            this.equipaFora.addItem(this.ligaPortuguesa[i]);
+            
+            
+            
              }
-        }
+        
         else {
            
-            this.equipaCasa.setVisible(false);
-            this.equipaFora.setVisible(false);
             
-            this.equipaCasa.removeAllItems();
-            this.equipaFora.removeAllItems();
-             
         }
       
         
@@ -175,30 +162,11 @@ public class Inicio extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
         
-        if(this.equipaCasa.getSelectedItem().toString().equals(this.equipaFora.getSelectedItem().toString())) {
-        
-             JOptionPane.showMessageDialog(null, "As equipas tem de ser diferentes para poder apostar","Equipas invalidas",JOptionPane.ERROR_MESSAGE);
-        
-        }
-        
-        else {
-            this.info = new TrataInformacao();
-            this.leitura= new Leitura();
-            
-            String liga = this.ligas.getSelectedItem().toString();
-            String equipaC = this.equipaCasa.getSelectedItem().toString();
-            String equipaF = this.equipaFora.getSelectedItem().toString();
-            String [ ]equipas;
-            equipas =this.equipa.procuraEquipa(liga, equipaC, equipaF);
-            List<Jogador> j = this.leitura.lerJogadores(equipas[0]);
-            this.info.equipa(j);
-           
-           System.out.println(this.info.mediaJogadores());
-            
-                   
+       
+     
 
         
-        }
+        
         
         
     }//GEN-LAST:event_jButton1MouseClicked
@@ -242,13 +210,12 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> equipaCasa;
-    private javax.swing.JComboBox<String> equipaFora;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> ligas;
+    private javax.swing.JLabel resultado;
+    private javax.swing.JTextArea vencedores;
     // End of variables declaration//GEN-END:variables
 }

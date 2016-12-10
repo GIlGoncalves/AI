@@ -389,6 +389,26 @@ public class TrataInformacao {
     
     
     
+    public float mediaJogadores() {
+    
+        int size=0;
+        int soma=0;
+        int i =0;
+        
+        for (List<Jogador> j : this.equipa.values()) {
+        
+            for(Jogador k : j) {
+            
+                soma=soma+k.getSkill();
+            
+            }
+            size=size+j.size();
+            
+        
+        } 
+        
+    return (soma/size);
+    }
     
     
     

@@ -28,8 +28,8 @@ public class Jogador {
         this.nome = "";
         this.posicao = "";
         this.idade=-1;
-        this.skill = 0;
-        this.status = true;
+        this.skill = -1;
+        this.status = false;
     }
     
     

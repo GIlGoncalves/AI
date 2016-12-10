@@ -253,11 +253,13 @@ public class receiveMessageACL extends SimpleBehaviour {
 		String a;
 		String b;
 		String id;
-		public sendMessageAJ(String av, String bv,int id){
+                String liga;
+		public sendMessageAJ(String liga1, String av, String bv,int id){
 			super();
 			this.a= av;
 			this.b= bv;
 			this.id = Integer.toString(id);
+                        liga = liga1;
 		}
 		@Override 
 		public void action(){
@@ -269,6 +271,8 @@ public class receiveMessageACL extends SimpleBehaviour {
 			
 				String s = a.concat(":");
 				s = s.concat(b);
+				s= s.concat(":");
+				s=s.concat(liga);
 				msg.setContent(s);
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
@@ -399,7 +403,7 @@ public class receiveMessageACL extends SimpleBehaviour {
 			
 		seq1.addSubBehaviour(new sendMessageAE(at,bt,i,liga));
 			seq1.addSubBehaviour(new receiveMessageAE());
-			seq2.addSubBehaviour(new sendMessageAJ(at,bt,i));
+			seq2.addSubBehaviour(new sendMessageAJ(liga,at,bt,i));
 			seq2.addSubBehaviour(new receiveMessageAJ());
 			seq3.addSubBehaviour(new sendMessageAH(at,bt,i));
 			seq3.addSubBehaviour(new receiveMessageAH());
