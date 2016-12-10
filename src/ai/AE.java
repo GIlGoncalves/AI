@@ -1,4 +1,6 @@
 package ai;
+import java.util.GregorianCalendar;
+
 import jade.core.*;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.OneShotBehaviour;
@@ -26,8 +28,8 @@ public class AE  extends Agent{
 			
 			if(msg != null){
 				SequentialBehaviour seq = new SequentialBehaviour();
-				
-				seq.addSubBehaviour(new sendMessageC(msg.getConversationId()));
+				String equipas = msg.getContent();
+				seq.addSubBehaviour(new sendMessageC(msg.getConversationId(), equipas));
 				myAgent.addBehaviour(seq);
 				
 			}else block();
@@ -40,9 +42,18 @@ public class AE  extends Agent{
 	
 	private class sendMessageC extends OneShotBehaviour{
 		String id ;
-	 public sendMessageC(String s) {
+		String equipa1;
+		String equipa2;
+		String liga;
+	 public sendMessageC(String s,String eq) {
 		id = s;
 	
+		String[] parts = eq.split(":");
+		equipa1 = parts[0];
+		equipa2 = parts[1];
+		liga = parts[2];
+		
+		
 	}
 		@Override 
 		public void action(){
@@ -51,17 +62,15 @@ public class AE  extends Agent{
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("ESTADO");
 			msg.setConversationId(id);
-			
-			
-			// meter o conteudo como sendo o calculo 	msg.setContent("");
-			
-			float res = 0;
+			Leitura l = new Leitura();
+			//GregorianCalendar dataC = l.ultimoJogo(equipa1, liga);
+			//GregorianCalendar dataF = l.ultimoJogo(equipa2, liga);
+			float casaP =1;// (float) dataC.compareTo(new GregorianCalendar()) * (-1);
+			float foraP =2;// (float) dataF.compareTo(new GregorianCalendar())* (-1);
+			float res = casaP -foraP;
 			msg.setContent(String.valueOf(res));
-			
-			
-			//
-				msg.addReceiver(receiver);
-				myAgent.send(msg);
+			msg.addReceiver(receiver);
+			myAgent.send(msg);
 			
 			
 		}
