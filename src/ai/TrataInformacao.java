@@ -390,16 +390,16 @@ public class TrataInformacao {
     
         int size=0;
         int soma=0;
-       
+        int i=0;
         
         for (List<Jogador> j : this.equipa.values()) {
         
-            for(Jogador k : j) {
+            for(i=0;i<j.size();i++) {
+           
+               soma=soma+j.get(i).getSkill();
+             size++;
+           }
             
-                soma=soma+k.getSkill();
-            
-            }
-            size=size+j.size();
             
         
         } 
