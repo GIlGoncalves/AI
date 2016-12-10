@@ -64,21 +64,26 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 			msg.setOntology("JOGADORES");
 			msg.setConversationId(id);
                        Leitura l = new Leitura();
-                       TrataInformacao t = new TrataInformacao();
                        
-                        Map<String,List<Jogador>> equipaC = t.equipa(l.lerJogadores(nomeLiga,nomeEquipaC));
-                        Map<String,List<Jogador>> equipaF = t.equipa(l.lerJogadores(nomeLiga,nomeEquipaF));
-                        float mediaJogadoresF = t.mediaJogadores();
-                        float mediaJogadoresC = t.mediaJogadores();
-                        float mediaIdadeF = t.mediaIdade();
-                        float mediaIdadeC = t.mediaIdade();
+                       TrataInformacao equipaCasa = new TrataInformacao();
+                       TrataInformacao equipaFora = new TrataInformacao();
+                       
+                        Map<String,List<Jogador>> equipaC = equipaCasa.equipa(l.lerJogadores(nomeLiga,nomeEquipaC));
+                        Map<String,List<Jogador>> equipaF = equipaFora.equipa(l.lerJogadores(nomeLiga,nomeEquipaF));
+                        float mediaJogadoresF = equipaFora.mediaJogadores();
+                        float mediaJogadoresC = equipaCasa.mediaJogadores();
+                        float mediaIdadeF = equipaFora.mediaIdade();
+                        float mediaIdadeC = equipaCasa.mediaIdade();
+                        
+                     
                         
 			float resJ = mediaJogadoresC-mediaJogadoresF;
                         float resI = mediaIdadeC-mediaIdadeF;
-			
+                        //System.out.println(resJ + "    ola");
+
 			// meter o conteudo como sendo o calculo e 	msg.setContent("");
 			
-			msg.setContent(String.valueOf(resJ));
+			msg.setContent(String.valueOf(1));
                //        msg.setContent(String.valueOf(resI));
 			
 			//
