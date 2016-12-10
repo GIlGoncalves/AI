@@ -62,12 +62,14 @@ public class AE  extends Agent{
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("ESTADO");
 			msg.setConversationId(id);
+			//////
 			Leitura l = new Leitura();
-			//GregorianCalendar dataC = l.ultimoJogo(equipa1, liga);
-			//GregorianCalendar dataF = l.ultimoJogo(equipa2, liga);
-			float casaP =1;// (float) dataC.compareTo(new GregorianCalendar()) * (-1);
-			float foraP =2;// (float) dataF.compareTo(new GregorianCalendar())* (-1);
+			GregorianCalendar dataC = l.ultimoJogo(equipa1, liga);
+			GregorianCalendar dataF = l.ultimoJogo(equipa2, liga);
+			float casaP =(float) dataC.compareTo(new GregorianCalendar()) * (-1);
+			float foraP = (float) dataF.compareTo(new GregorianCalendar())* (-1);
 			float res = casaP -foraP;
+			/////
 			msg.setContent(String.valueOf(res));
 			msg.addReceiver(receiver);
 			myAgent.send(msg);

@@ -378,7 +378,7 @@ public GregorianCalendar ultimoJogo(String equipaDada,String liganome) {
  GregorianCalendar dataHoje = new GregorianCalendar();
     int i=1;
     
-      getFile("./Liga-"+liganome+"/Jogos/");
+      getFile("./Liga-"+liganome+"/Jornadas/");
       
        while(i<=this.count) {
            try{
