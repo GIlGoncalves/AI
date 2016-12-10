@@ -253,13 +253,13 @@ public class receiveMessageACL extends SimpleBehaviour {
 		String a;
 		String b;
 		String id;
-                String liga;
-		public sendMessageAJ(String liga1, String av, String bv,int id){
+        String liga;
+		public sendMessageAJ( String av, String bv,int id,String liga1){
 			super();
 			this.a= av;
 			this.b= bv;
 			this.id = Integer.toString(id);
-                        liga = liga1;
+            this.liga = liga1;
 		}
 		@Override 
 		public void action(){
@@ -363,7 +363,7 @@ public class receiveMessageACL extends SimpleBehaviour {
 		
 		@Override 
 		public void action(){
-			System.out.println("MANDANDO");
+			
 			
 			AID receiver = new AID();
 			receiver.setLocalName("Man1");
@@ -403,7 +403,7 @@ public class receiveMessageACL extends SimpleBehaviour {
 			
 		seq1.addSubBehaviour(new sendMessageAE(at,bt,i,liga));
 			seq1.addSubBehaviour(new receiveMessageAE());
-			seq2.addSubBehaviour(new sendMessageAJ(liga,at,bt,i));
+			seq2.addSubBehaviour(new sendMessageAJ(at,bt,i,liga));
 			seq2.addSubBehaviour(new receiveMessageAJ());
 			seq3.addSubBehaviour(new sendMessageAH(at,bt,i));
 			seq3.addSubBehaviour(new receiveMessageAH());
