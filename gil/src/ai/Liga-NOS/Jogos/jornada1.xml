@@ -2,7 +2,7 @@
 	<jogo>
 		<equipa_casa>SLB</equipa_casa>
 		<equipa_fora>FCP</equipa_fora>
-		<data>20-12-2016</data>
+		<data>20/12/2016</data>
 		<odd_casa>1.00</odd_casa>
 		<odd_empate>1.00</odd_empate>
 		<odd_fora>1.00</odd_fora>
@@ -10,7 +10,7 @@
 	<jogo>
 		<equipa_casa>SCP</equipa_casa>
 		<equipa_fora>VFC</equipa_fora>
-		<data>19-12-2016</data>
+		<data>19/12/2016</data>
 		<odd_casa>1.00</odd_casa>
 		<odd_empate>1.00</odd_empate>
 		<odd_fora>1.00</odd_fora>

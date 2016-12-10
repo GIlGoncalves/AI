@@ -22,6 +22,7 @@ public class Inicio extends javax.swing.JFrame {
     ,"Rio Ave","Sp. Braga","Sporting","Tondela","V. Guimarães","V. Setúbal"};
     private Leitura leitura;
     private NomesEquipas equipa;
+    private TrataInformacao info;
     
     /**
      * Creates new form Inicio
@@ -30,6 +31,7 @@ public class Inicio extends javax.swing.JFrame {
         initComponents();
         this.leitura= new Leitura();
         this.equipa = new NomesEquipas();
+        this.info = new TrataInformacao();
     }
 
     /**
@@ -180,24 +182,26 @@ public class Inicio extends javax.swing.JFrame {
         }
         
         else {
+            this.info = new TrataInformacao();
+            this.leitura= new Leitura();
+            
             String liga = this.ligas.getSelectedItem().toString();
             String equipaC = this.equipaCasa.getSelectedItem().toString();
             String equipaF = this.equipaFora.getSelectedItem().toString();
             String [ ]equipas;
             equipas =this.equipa.procuraEquipa(liga, equipaC, equipaF);
             
+          
             
+        
+        
+                    System.out.println((this.leitura.ultimoJogo(equipas[0])).get(Calendar.DAY_OF_MONTH));
             
-            try {
-                //this.leitura.lerJogadores(equipas[0]);
-                //this.leitura.lerJogadores(equipas[1]);
+                   
 
-                System.out.println( this.leitura.lerJornadas(equipas[0]));
-            } catch (IOException ex) {
-                Logger.getLogger(Inicio.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
+        
         }
+        
         
     }//GEN-LAST:event_jButton1MouseClicked
 
