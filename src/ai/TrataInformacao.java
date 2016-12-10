@@ -404,7 +404,7 @@ public class TrataInformacao {
         
         } 
         
-    return (soma/size);
+    return (float)(soma/size);
     }
     
     
