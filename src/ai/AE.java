@@ -5,12 +5,12 @@ import jade.core.*;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.core.behaviours.SequentialBehaviour;
-import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 //Agente que ve estado de uma equipa antes de uma jogo
 public class AE  extends Agent{
 
+        @Override
 	protected void setup(){
 		super.setup();
 		this.addBehaviour(new ReceiveBehaviour());
@@ -66,9 +66,22 @@ public class AE  extends Agent{
 			Leitura l = new Leitura();
 			GregorianCalendar dataC = l.ultimoJogo(equipa1, liga);
 			GregorianCalendar dataF = l.ultimoJogo(equipa2, liga);
-			float casaP =(float) dataC.compareTo(new GregorianCalendar()) * (-1);
-			float foraP = (float) dataF.compareTo(new GregorianCalendar())* (-1);
-			float res = casaP -foraP;
+			float res;
+                       // se for 1 significa que a equipa da casa jogou primeiro se for -1 foi a equipa fora  
+                        if(dataC.before(dataF)) {
+                        
+                            res=1;
+                        }
+                        else
+                        {
+                           if(dataC.after(dataF)) {
+                           
+                               res=-1;
+                           }
+                           else res=0;
+                        }
+                                
+                       
 			/////
 			msg.setContent(String.valueOf(res));
 			msg.addReceiver(receiver);

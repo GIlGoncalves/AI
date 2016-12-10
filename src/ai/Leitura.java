@@ -27,11 +27,11 @@ public class Leitura {
         
     }
     
-    public List<Jogador> lerJogadores(String nomeEquipa)   {
+    public List<Jogador> lerJogadores(String liganome,String nomeEquipa)   {
         List<Jogador> jogadores = new ArrayList<>();
         try{
         	
-            URL path = Leitura.class.getResource("./Liga-NOS/"+nomeEquipa+".xml");
+            URL path = Leitura.class.getResource("./Liga-"+liganome+"/Equipas/"+nomeEquipa+".xml");
            File g = new File(path.getFile());
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -416,7 +416,7 @@ public GregorianCalendar ultimoJogo(String equipaDada,String liganome) {
           ano = Integer.parseInt(datas[2]);
           mes= Integer.parseInt(datas[1]);
           dia=Integer.parseInt(datas[0]);
-           newData = new GregorianCalendar(ano,mes,dia);
+            newData = new GregorianCalendar(ano,mes-1,dia);
             
           
 
