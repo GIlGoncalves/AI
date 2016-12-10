@@ -83,7 +83,7 @@ private class ReceiveBehaviour extends CyclicBehaviour {
 
 			// meter o conteudo como sendo o calculo e 	msg.setContent("");
 			
-			msg.setContent(String.valueOf(1));
+			msg.setContent(String.valueOf(resJ));
                //        msg.setContent(String.valueOf(resI));
 			
 			//
