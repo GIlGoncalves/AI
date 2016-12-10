@@ -190,12 +190,10 @@ public class Inicio extends javax.swing.JFrame {
             String equipaF = this.equipaFora.getSelectedItem().toString();
             String [ ]equipas;
             equipas =this.equipa.procuraEquipa(liga, equipaC, equipaF);
-            
-          
-            
-        
-        
-                    System.out.println((this.leitura.ultimoJogo(equipas[0])).get(Calendar.DAY_OF_MONTH));
+            List<Jogador> j = this.leitura.lerJogadores(equipas[0]);
+            this.info.equipa(j);
+           
+           System.out.println(this.info.mediaJogadores());
             
                    
 
