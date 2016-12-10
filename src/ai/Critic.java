@@ -218,12 +218,14 @@ public class receiveMessageACL extends SimpleBehaviour {
 	private class sendMessageAE extends OneShotBehaviour{
 		String a;
 		String b;
+		String liga;
 		String id;
-		public sendMessageAE(String av, String bv,int id){
+		public sendMessageAE(String av, String bv,int id,String liga){
 			super();
 			this.a= av;
 			this.b= bv;
 			this.id = Integer.toString(id);
+			this.liga = liga;
 		}
 		@Override 
 		public void action(){
@@ -235,6 +237,8 @@ public class receiveMessageACL extends SimpleBehaviour {
 			
 				String s = a.concat(":");
 				s = s.concat(b);
+				s= s.concat(":");
+				s=s.concat(liga);
 				msg.setContent(s);
 				msg.addReceiver(receiver);
 				myAgent.send(msg);
@@ -393,7 +397,7 @@ public class receiveMessageACL extends SimpleBehaviour {
 		 SequentialBehaviour seq3 = new SequentialBehaviour();
 		 SequentialBehaviour seq4 = new SequentialBehaviour();
 			
-		seq1.addSubBehaviour(new sendMessageAE(at,bt,i));
+		seq1.addSubBehaviour(new sendMessageAE(at,bt,i,liga));
 			seq1.addSubBehaviour(new receiveMessageAE());
 			seq2.addSubBehaviour(new sendMessageAJ(at,bt,i));
 			seq2.addSubBehaviour(new receiveMessageAJ());
