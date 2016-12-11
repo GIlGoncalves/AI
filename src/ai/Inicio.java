@@ -25,11 +25,12 @@ public class Inicio extends javax.swing.JFrame {
     
     public Inicio () {
         
+      
+        
+        initComponents();
         this.apostar.setVisible(false);
         this.resultado.setVisible(false);
         this.vencedores.setVisible(false);
-        
-        initComponents();
         this.nomes= new HashMap<>();
         this.nomes.put("Liga Portuguesa", "NOS");
         this.nomes.put("Liga Espanhola", "LFP");
