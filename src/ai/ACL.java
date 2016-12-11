@@ -8,7 +8,7 @@ import jade.core.behaviours.SequentialBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
-//Agente que verifica a classificaçao de uma equipa 
+//Agente que verifica a classificacao de uma equipa 
 public class ACL  extends Agent{
 
 	protected void setup(){
