@@ -369,6 +369,17 @@ public class receiveMessageACL extends SimpleBehaviour {
 			receiver.setLocalName("Man1");
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			msg.setOntology("CRITIC");
+			for(Prediction a : ligacritic.getPred()){
+				float res[] = new float[4];
+				res = ligacritic.getCriterios(a.getIndex());
+				// estado jogadoes historico classificaçao
+			
+				double pred = res[0] * 0.2 + res[1] *0.5  + res[2] * 0.2 + res[3] * 0.1 +2;
+				
+				a.setResultado((float)pred);
+				
+				
+			}
 			
 			try {
 				this.liga=ligacritic;

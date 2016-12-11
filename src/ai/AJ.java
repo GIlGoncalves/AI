@@ -6,6 +6,8 @@ import jade.core.behaviours.SequentialBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
+
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 //Agente que verifica o score de um jogador 
@@ -72,20 +74,16 @@ private class ReceiveBehaviour extends CyclicBehaviour {
                         Map<String,List<Jogador>> equipaF = equipaFora.equipa(l.lerJogadores(nomeLiga,nomeEquipaF));
                         float mediaJogadoresF = equipaFora.mediaJogadores();
                         float mediaJogadoresC = equipaCasa.mediaJogadores();
-                        float mediaIdadeF = equipaFora.mediaIdade();
-                        float mediaIdadeC = equipaCasa.mediaIdade();
+                      
+                      
                         
-                     
+			float resJ = mediaJogadoresC - mediaJogadoresF;
                         
-			float resJ = mediaJogadoresC-mediaJogadoresF;
-                        float resI = mediaIdadeC-mediaIdadeF;
-                        //System.out.println(resJ + "    ola");
 
 			// meter o conteudo como sendo o calculo e 	msg.setContent("");
 			
 			msg.setContent(String.valueOf(resJ));
-               //        msg.setContent(String.valueOf(resI));
-			
+              
 			//
 				msg.addReceiver(receiver);
 				myAgent.send(msg);

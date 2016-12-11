@@ -241,10 +241,16 @@ public void JporAcontecer(LigaB liga){
          
          DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
          Date date = df.parse(data);
+         //////////////////////////////
+         String dataOntem = "09/12/2016";
+         Date date2 = df.parse(dataOntem);
+         GregorianCalendar cal2 = new GregorianCalendar();
+         cal2.setTime(date2);
+         ////////////////////testar
          GregorianCalendar cal = new GregorianCalendar();
          cal.setTime(date);
 	 //ver se a data e actual e addicionar
-       if(cal.after(new GregorianCalendar())){ 
+       if(cal.after(cal2) || cal.equals(new GregorianCalendar())){ 
 	 Prediction p = new Prediction( siglaA,  siglaB, 0,1, Float.valueOf(oddc), Float.valueOf(odde), Float.valueOf(oddf),cal);
 	 liga.addPred(p);
        }
