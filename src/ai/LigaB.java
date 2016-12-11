@@ -44,7 +44,7 @@ public class LigaB implements Serializable{
    }
    public void  updateRes(int i ,int x ,float y){
 	   res[i][x] = y ;
-	  
+	
 	   }
 	   
    

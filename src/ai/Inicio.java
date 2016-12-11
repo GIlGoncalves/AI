@@ -8,6 +8,8 @@ package ai;
 import jade.gui.GuiEvent;
 import java.util.*;
 
+import javax.swing.DefaultListModel;
+
 /**
  *
  * @author gil
@@ -25,11 +27,11 @@ public class Inicio extends javax.swing.JFrame {
     
     public Inicio () {
         
-        this.apostar.setVisible(false);
-        this.resultado.setVisible(false);
-        this.vencedores.setVisible(false);
+      
         
         initComponents();
+        this.resultado.setVisible(false);
+        this.vencedores.setVisible(false);
         this.nomes= new HashMap<>();
         this.nomes.put("Liga Portuguesa", "NOS");
         this.nomes.put("Liga Espanhola", "LFP");
@@ -41,6 +43,7 @@ public class Inicio extends javax.swing.JFrame {
     }
   
     public Inicio(Software sofs) {
+    	 this.sof = sofs;
         initComponents();
         this.nomes= new HashMap<>();
         this.nomes.put("Liga Portuguesa", "NOS");
@@ -49,7 +52,7 @@ public class Inicio extends javax.swing.JFrame {
         this.nomes.put("Bundesliga", "DFB");
         this.nomes.put("Serie A", "SA");
         this.nomes.put("Ligue 1", "FFF");
-        this.sof = sofs;
+        
         
         
         this.apostar.setVisible(false);
@@ -72,7 +75,8 @@ public class Inicio extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         apostar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        vencedores = new javax.swing.JTextArea();
+        vencedores = new javax.swing.JList();
+        vencedores.setValueIsAdjusting(true);
         resultado = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -99,13 +103,13 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        vencedores.setColumns(20);
-        vencedores.setRows(5);
+      //  vencedores.setColumns(20);
+       // vencedores.setRows(5);
         jScrollPane1.setViewportView(vencedores);
 
         resultado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         resultado.setForeground(new java.awt.Color(153, 0, 0));
-        resultado.setText("Resultado");
+        resultado.setText("Previs\u00F5es");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ai/o-jogador-de-futebol-em-um-fundo-abstrato_1048-450.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -153,13 +157,40 @@ public class Inicio extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+ public void updateL(LigaB liga){
+	 DefaultListModel<String> model = new DefaultListModel<>();
+		for(Prediction a : liga.getPred()){
+			String s = new String();
+			 if(a.getResultado()>1){
+				if(a.getResultado()>=5)
+					s =" SUPER VENCEDOR->"+ a.getSiglaA() +" vs "+a.getSiglaB();
+					else s ="VENCEDOR->"+ a.getSiglaA() +" vs "+a.getSiglaB();
+			}
+				
+			else if(a.getResultado()<-1){
+				if(a.getResultado()<= -5)
+				s = a.getSiglaA() +" vs "+a.getSiglaB()+"<-SUPER VENCEDOR";
+				else s = a.getSiglaA() +" vs "+a.getSiglaB()+"<- VENCEDOR";
+			}else
+s = a.getSiglaA() +" EMPATE "+a.getSiglaB();
+			
+				
+			model.addElement(s);
+		}
+		vencedores.removeAll();
+		vencedores.setModel(model);
+ }
+    
     private void ligasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ligasMouseClicked
         // TODO add your handling code here:
         
-        if(this.ligas.getSelectedItem().toString().equals("Liga Portuguesa")) {
+        if(this.ligas.getSelectedItem().toString().equals("")) {
             
-            this.apostar.setVisible(true);
+        	  this.apostar.setVisible(false);
+              
+              this.resultado.setVisible(false);
+          
+              this.vencedores.setVisible(false);
            
            
             
@@ -168,12 +199,8 @@ public class Inicio extends javax.swing.JFrame {
              }
         
         else {
-            
-            this.apostar.setVisible(false);
-        
-            this.resultado.setVisible(false);
-        
-            this.vencedores.setVisible(false);
+        	 this.apostar.setVisible(true);
+          
            
             
         }
@@ -199,8 +226,8 @@ public class Inicio extends javax.swing.JFrame {
             
         GuiEvent ge = new GuiEvent(a,1);
             
+       
         sof.postGuiEvent(ge);
-     
 
         
         
@@ -253,6 +280,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> ligas;
     private javax.swing.JLabel resultado;
-    private javax.swing.JTextArea vencedores;
+    private javax.swing.JList vencedores;
     // End of variables declaration//GEN-END:variables
 }

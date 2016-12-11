@@ -35,6 +35,7 @@ public String getSiglaA() {
 public void setSiglaA(String siglaA) {
 	this.siglaA = siglaA;
 }
+
 public int getIndex() {
 	return index;
 }

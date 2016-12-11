@@ -5,6 +5,7 @@
  */
 package ai;
 
+
 import jade.core.AID;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.gui.GuiAgent;
@@ -22,10 +23,10 @@ public class Software extends GuiAgent{
     
     @Override
     protected void setup () {
-        
+        super.setup();
         this.myGui = new Inicio(this);
         myGui.setVisible(true);
-      
+        this.addBehaviour(new ReceiveCEnas());
     }
     
     
@@ -62,23 +63,49 @@ public class Software extends GuiAgent{
       @Override
     protected void onGuiEvent(GuiEvent ge) {
      
-        int command = ge.getType();
-        
+     
+        AID receiver = new AID();
+		receiver.setLocalName("Man1");
+		ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
+		msg.setOntology("INFOLIGA");
+		msg.addReceiver(receiver);
+		  String conteudo = (String) ge.getSource();
+		msg.setContent(conteudo);
+		
+		send(msg);
         
             
-            String conteudo = (String) ge.getSource();
-            AID recevir = new AID();
-            recevir.setLocalName("Man1");
-            
-             ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
-             
-             msg.addReceiver(recevir);
-             send(msg);
+          
+          
         
         
     
     } 
     
+      private class ReceiveCEnas extends CyclicBehaviour {
+  		public void action() {
+  			ACLMessage msg = null;
+  			if ((msg = myAgent.receive()) != null)
+  			{
+  			System.out.println("==== New message received ===");
+  			System.out.println("= Sender : "+msg.getSender().getLocalName());
+  			try {
+  				 LigaB newliga = (LigaB) msg.getContentObject();
+  				
+  				myGui.updateL(newliga);
+  				
+  				
+  				
+  			} catch (Exception e) {
+  				// Nao deu
+  			}
+  		
+  			
+  			} else {
+  			block();
+  			}
+  		}
+  	}
     
     
     
