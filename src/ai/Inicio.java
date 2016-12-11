@@ -158,7 +158,6 @@ public class Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         if(this.ligas.getSelectedItem().toString().equals("Liga Portuguesa")) {
-           String a = this.nomes.get(this.ligas.getSelectedItem().toString());
             
             this.apostar.setVisible(true);
            
