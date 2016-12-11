@@ -111,7 +111,7 @@ public class Inicio extends javax.swing.JFrame {
         resultado.setForeground(new java.awt.Color(153, 0, 0));
         resultado.setText("Previs\u00F5es");
 
-      //  jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ai/o-jogador-de-futebol-em-um-fundo-abstrato_1048-450.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ai/o-jogador-de-futebol-em-um-fundo-abstrato_1048-450.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
